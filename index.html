@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20241104141654">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="#" data-goto-header data-goto=".hero" class="header__logo">
+					<img class="header__logo-img ibg ibg--contain" src="img/logo.svg " alt="logo" />
+				</a>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a class="menu__link" href="about.html">About</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="team.html">Team</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="services.html">Services</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="projects.html">Projects </a>
+							</li>
+							<li data-goto-header data-goto=".reviews" class="menu__item">
+								<a class="menu__link" href="#">Reviews</a>
+							</li>
+							<li data-goto-header data-goto=".price" class="menu__item">
+								<a class="menu__link" href="#">Price</a>
+							</li>
+							<li data-goto-header data-goto=".contacts" class="menu__item">
+								<a class="menu__link" href="#">Contact</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<button aria-label="icon menu" type="button" class="icon-menu">
+					<span></span>
+				</button>
+			</div>
+		</header>
+
+		<main class="page">
+			<section class="page__hero hero">
+				<img class="hero__image hero__image--filter ibg" src="img/hero/hero-1.webp" alt="hero-bg" />
+				<div class="hero__cnt">
+					<h1 class="hero__title title title--lightgreen">
+						<span>Bring</span> Your Dream Design <span>to Life</span>
+					</h1>
+					<div class="hero__text text text--lightgreen">
+						<p>
+							Our philosophy emphasizes involving our clients in every step of
+							the project and coordinating all elements of the room design
+							with them, from furniture choices to wall and floor finishes, as
+							well as various architectural solutions. This ensures that
+							clients feel they are the architects of their own comfort
+						</p>
+					</div>
+					<div data-watch-threshold="0.6" data-watch data-watch-once class="hero__actions">
+						<a data-watch-threshold="0.6" data-watch data-watch-once data-popup="#popup" class="hero__button button" href="#">Create project
+						</a>
+					</div>
+				</div>
+			</section>
+			<div data-watch data-watch-once class="block-header">
+				<h2 class="block-header__title">Meet Our <span>Team</span></h2>
+			</div>
+			<div class="page__team team">
+				<div class="team__cnt">
+					<article class="team__member member-team">
+						<div class="member-team__body">
+							<h3 class="member-team__name">Iryna Stepanska</h3>
+							<div class="member-team__position">Interior Designer</div>
+						</div>
+						<div class="member-team__img">
+							<img class="member-team__image ibg" src="img/team/1.webp" alt="Image" />
+						</div>
+					</article>
+					<article class="team__member member-team member-team--reverse">
+						<div class="member-team__body">
+							<h3 class="member-team__name">Taras Dovzhenko</h3>
+							<div class="member-team__position">
+								Senior Interior Designer
+							</div>
+						</div>
+						<div class="member-team__img">
+							<img class="member-team__image ibg" src="img/team/2.webp" alt="Image" />
+						</div>
+					</article>
+					<article class="team__member member-team">
+						<div class="member-team__body">
+							<h3 class="member-team__name">Nadia Wells</h3>
+							<div class="member-team__position">Architect</div>
+						</div>
+						<div class="member-team__img">
+							<img class="member-team__image ibg" src="img/team/3.webp" alt="Image" />
+						</div>
+					</article>
+					<article class="team__member member-team member-team--reverse">
+						<div class="member-team__body">
+							<h3 class="member-team__name">Yevhen Koval</h3>
+							<div class="member-team__position">Creative Director</div>
+						</div>
+						<div class="member-team__img">
+							<img class="member-team__image ibg" src="img/team/4.webp" alt="Image" />
+						</div>
+					</article>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20241104141654"></script>
+</body>
+
+</html>
