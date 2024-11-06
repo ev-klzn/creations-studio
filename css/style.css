@@ -397,6 +397,9 @@ body::after {
 [class*=decor] {
   pointer-events: none
 }
+[class*="--dark"] {
+  background-color: #002117
+}
 [class*=_link] {
   transition: color .3s
 }
@@ -690,6 +693,60 @@ video {
   position: sticky;
   top: 48px;
   aspect-ratio: 1920/1000
+}
+.offerings {
+  color: #d1deda
+}
+.offers__list {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  -webkit-column-gap: 1.875rem;
+  -moz-column-gap: 1.875rem;
+  column-gap: 1.875rem;
+  row-gap: 3.125rem
+}
+.offer__img {
+  margin-bottom: 2.5rem
+}
+.offer__image {
+  aspect-ratio: 530/300
+}
+.offer__title {
+  font-size: 2rem
+}
+.offer__text {
+  color: #d1deda;
+  margin-bottom: 1.25rem;
+  letter-spacing: .0125rem
+}
+.offer__list {
+  margin-bottom: .1875rem
+}
+.offer__item {
+  display: inline-flex;
+  align-self: center;
+  gap: .625rem;
+  letter-spacing: .0125rem
+}
+.offer__item::before {
+  content: "";
+  display: inline-block;
+  background: url(../img/icons/point.svg) 0 0 no-repeat;
+  background-size: cover;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: 0 0 1.5rem
+}
+.offer__item:not(:last-child) {
+  margin-bottom: .4375rem
+}
+.offer__actions {
+  display: flex;
+  flex-direction: row-reverse
+}
+.offer__more {
+  font-size: 1.0625rem;
+  letter-spacing: .010625rem
 }
 @font-face {
   font-family: swiper-icons;
@@ -1350,6 +1407,12 @@ button.swiper-pagination-bullet {
   .wrap-cnt {
     padding-right: 3.875rem
   }
+  .wrap-cnt--wide {
+    padding-left: 7.5rem
+  }
+  .wrap-cnt--wide {
+    padding-right: 7.5rem
+  }
   .block-header {
     padding-bottom: 7.5rem
   }
@@ -1402,6 +1465,9 @@ button.swiper-pagination-bullet {
   .page__mission {
     margin-bottom: 7.5rem
   }
+  .page__offerings {
+    padding-bottom: 7.5rem
+  }
   .hero__title {
     padding-left: 8.4375rem
   }
@@ -1446,6 +1512,15 @@ button.swiper-pagination-bullet {
   .gallery {
     margin-bottom: 7.5rem
   }
+  .offer__img {
+    margin-bottom: 2.5rem
+  }
+  .offer__title {
+    margin-bottom: 1.25rem
+  }
+  .offer__item {
+    gap: .625rem
+  }
 }
 @media (max-width:75em) {
   .team__cnt {
@@ -1474,6 +1549,12 @@ button.swiper-pagination-bullet {
     padding-left: .9375rem
   }
   .wrap-cnt {
+    padding-right: .9375rem
+  }
+  .wrap-cnt--wide {
+    padding-left: .9375rem
+  }
+  .wrap-cnt--wide {
     padding-right: .9375rem
   }
   .block-header {
@@ -1518,6 +1599,9 @@ button.swiper-pagination-bullet {
   .page__mission {
     margin-bottom: 2.5rem
   }
+  .page__offerings {
+    padding-bottom: 2.5rem
+  }
   .hero__title {
     padding-left: .9375rem
   }
@@ -1555,6 +1639,20 @@ button.swiper-pagination-bullet {
   }
   .gallery {
     margin-bottom: 2.5rem
+  }
+  .offer__img {
+    margin-bottom: 1.25rem
+  }
+  .offer__title {
+    margin-bottom: .625rem
+  }
+  .offer__item {
+    gap: .3125rem
+  }
+}
+@media (max-width:81.25em) {
+  .offers__list {
+    grid-template-columns: auto
   }
 }
 @media (max-width:61.99875em) {
@@ -1777,6 +1875,12 @@ button.swiper-pagination-bullet {
   .wrap-cnt {
     padding-right: clamp(.9375rem ,.2463235294rem + 3.4558823529vw ,3.875rem)
   }
+  .wrap-cnt--wide {
+    padding-left: clamp(.9375rem ,-.6066176471rem + 7.7205882353vw ,7.5rem)
+  }
+  .wrap-cnt--wide {
+    padding-right: clamp(.9375rem ,-.6066176471rem + 7.7205882353vw ,7.5rem)
+  }
   .block-header {
     padding-bottom: clamp(3.125rem ,2.0955882353rem + 5.1470588235vw ,7.5rem)
   }
@@ -1819,6 +1923,9 @@ button.swiper-pagination-bullet {
   .page__mission {
     margin-bottom: clamp(2.5rem ,1.3235294118rem + 5.8823529412vw ,7.5rem)
   }
+  .page__offerings {
+    padding-bottom: clamp(2.5rem ,1.3235294118rem + 5.8823529412vw ,7.5rem)
+  }
   .hero__title {
     padding-left: clamp(.9375rem ,-.8272058824rem + 8.8235294118vw ,8.4375rem)
   }
@@ -1856,6 +1963,15 @@ button.swiper-pagination-bullet {
   }
   .gallery {
     margin-bottom: clamp(2.5rem ,1.3235294118rem + 5.8823529412vw ,7.5rem)
+  }
+  .offer__img {
+    margin-bottom: clamp(1.25rem ,.9558823529rem + 1.4705882353vw ,2.5rem)
+  }
+  .offer__title {
+    margin-bottom: clamp(.625rem ,.4779411765rem + .7352941176vw ,1.25rem)
+  }
+  .offer__item {
+    gap: clamp(.3125rem ,.2389705882rem + .3676470588vw ,.625rem)
   }
 }
 @media (min-width:47.99875em)and (max-width:105em) {
