@@ -513,6 +513,10 @@ video {
   border: 2px solid #fafafa;
   background-color: rgba(0,0,0,0)
 }
+.swiper-button-disabled {
+  color: #cecece;
+  pointer-events: none
+}
 .header {
   position: fixed;
   width: 100%;
@@ -697,7 +701,7 @@ video {
 .offerings {
   color: #d1deda
 }
-.offers__list {
+.offers-list {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   -webkit-column-gap: 1.875rem;
@@ -747,6 +751,81 @@ video {
 .offer__more {
   font-size: 1.0625rem;
   letter-spacing: .010625rem
+}
+.video-container {
+  position: relative
+}
+video {
+  width: 100%;
+  height: 100%
+}
+.play-button,
+.play-button-right {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  border: none;
+  width: 100%;
+  height: 100%;
+  font-size: 3.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity .3s
+}
+.play-button img,
+.play-button-right img {
+  width: 3.75rem;
+  height: 3.75rem
+}
+.play-button-right.hidden,
+.play-button.hidden {
+  opacity: 0
+}
+.projects__body {
+  display: grid;
+  gap: 1.875rem;
+  align-items: center;
+  grid-template-columns: 35% 65%
+}
+.projects__date {
+  color: #cecece;
+  font-size: 1.0625rem;
+  font-weight: 300;
+  letter-spacing: .17px
+}
+.projects__title {
+  color: #016546
+}
+.projects__actions {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: auto auto;
+  gap: 1.25rem
+}
+.projects__nav {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2,1fr);
+  gap: .625rem;
+  font-size: 3.125rem;
+  line-height: 1
+}
+.projects__nav-prew {
+  transition: color .5s
+}
+.projects__nav-next {
+  transition: color .5s
+}
+.projects__vd {
+  aspect-ratio: 950/700
+}
+.project__text {
+  font-size: 1.0625rem
 }
 @font-face {
   font-family: swiper-icons;
@@ -1468,6 +1547,9 @@ button.swiper-pagination-bullet {
   .page__offerings {
     padding-bottom: 7.5rem
   }
+  .page__projects {
+    margin-bottom: 7.5rem
+  }
   .hero__title {
     padding-left: 8.4375rem
   }
@@ -1520,6 +1602,18 @@ button.swiper-pagination-bullet {
   }
   .offer__item {
     gap: .625rem
+  }
+  .projects__about {
+    padding-left: 7.5rem
+  }
+  .projects__title {
+    font-size: 2rem
+  }
+  .projects__title {
+    margin-bottom: 2.5rem
+  }
+  .project__text {
+    margin-bottom: 4.375rem
   }
 }
 @media (max-width:75em) {
@@ -1602,6 +1696,9 @@ button.swiper-pagination-bullet {
   .page__offerings {
     padding-bottom: 2.5rem
   }
+  .page__projects {
+    margin-bottom: 2.5rem
+  }
   .hero__title {
     padding-left: .9375rem
   }
@@ -1649,9 +1746,21 @@ button.swiper-pagination-bullet {
   .offer__item {
     gap: .3125rem
   }
+  .projects__about {
+    padding-left: .9375rem
+  }
+  .projects__title {
+    font-size: 1.5rem
+  }
+  .projects__title {
+    margin-bottom: 1.875rem
+  }
+  .project__text {
+    margin-bottom: 1.875rem
+  }
 }
 @media (max-width:81.25em) {
-  .offers__list {
+  .offers-list {
     grid-template-columns: auto
   }
 }
@@ -1926,6 +2035,9 @@ button.swiper-pagination-bullet {
   .page__offerings {
     padding-bottom: clamp(2.5rem ,1.3235294118rem + 5.8823529412vw ,7.5rem)
   }
+  .page__projects {
+    margin-bottom: clamp(2.5rem ,1.3235294118rem + 5.8823529412vw ,7.5rem)
+  }
   .hero__title {
     padding-left: clamp(.9375rem ,-.8272058824rem + 8.8235294118vw ,8.4375rem)
   }
@@ -1972,6 +2084,18 @@ button.swiper-pagination-bullet {
   }
   .offer__item {
     gap: clamp(.3125rem ,.2389705882rem + .3676470588vw ,.625rem)
+  }
+  .projects__about {
+    padding-left: clamp(.9375rem ,-.6066176471rem + 7.7205882353vw ,7.5rem)
+  }
+  .projects__title {
+    font-size: clamp(1.5rem ,1.3823529412rem + .5882352941vw ,2rem)
+  }
+  .projects__title {
+    margin-bottom: clamp(1.875rem ,1.7279411765rem + .7352941176vw ,2.5rem)
+  }
+  .project__text {
+    margin-bottom: clamp(1.875rem ,1.2867647059rem + 2.9411764706vw ,4.375rem)
   }
 }
 @media (min-width:47.99875em)and (max-width:105em) {
@@ -2029,5 +2153,11 @@ button.swiper-pagination-bullet {
   }
   .mission__link:hover {
     color: #fff
+  }
+  .projects__nav-prew:hover {
+    color: #009e67
+  }
+  .projects__nav-next:hover {
+    color: #009e67
   }
 }
