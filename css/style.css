@@ -182,8 +182,9 @@ body {
   width: 100%
 }
 .button--tr {
-  border: 1px solid #fff;
-  background-color: #002117
+  color: #00855b;
+  border: 1px solid #00855b;
+  background-color: rgba(0,0,0,0)
 }
 .icon-menu {
   display: none
@@ -802,9 +803,6 @@ video {
 .play-button.hidden {
   opacity: 0
 }
-.projects__list--right {
-  padding-right: 1.875rem
-}
 .projects__list--right .projects__body {
   display: grid;
   gap: 1.875rem;
@@ -812,11 +810,8 @@ video {
   grid-template-columns: 65% 35%
 }
 .projects__list--right .projects__body .projects__about {
-  order: 2;
-  padding-left: .9375rem
-}
-.projects__list--right .projects__body .projects__videos {
-  order: 1
+  padding-left: .9375rem;
+  padding-right: 0
 }
 .projects__body {
   display: grid;
@@ -837,10 +832,12 @@ video {
   color: #016546
 }
 .projects__actions {
-  display: grid;
   justify-content: space-between;
-  grid-template-columns: auto auto;
+  display: flex;
   gap: 1.25rem
+}
+.projects__actions--right {
+  flex-direction: row-reverse
 }
 .projects__nav {
   display: grid;
@@ -865,6 +862,9 @@ video {
 }
 .projects__vd {
   aspect-ratio: 950/700
+}
+.projects__link {
+  text-align: center
 }
 .project__text {
   font-size: 1.0625rem
@@ -1516,6 +1516,12 @@ button.swiper-pagination-bullet {
     width: 6.25rem;
     background: url(../img/icons/border-tl.svg) 0 0 no-repeat
   }
+  .projects__list--right .projects__body .projects__about {
+    order: 2
+  }
+  .projects__list--right .projects__body .projects__videos {
+    order: 1
+  }
 }
 @media (min-width:75em)and (min-width:105em) {
   .team__cnt::after {
@@ -1658,6 +1664,9 @@ button.swiper-pagination-bullet {
   .offer__item {
     gap: .625rem
   }
+  .projects__list--right .projects__body {
+    padding-right: 7.5rem
+  }
   .projects__about {
     padding-left: 7.5rem
   }
@@ -1666,6 +1675,9 @@ button.swiper-pagination-bullet {
   }
   .projects__title {
     margin-bottom: 2.5rem
+  }
+  .projects__link {
+    margin-top: 7.5rem
   }
   .projects-all {
     padding-top: 6.25rem
@@ -1682,6 +1694,7 @@ button.swiper-pagination-bullet {
     grid-template-columns: repeat(2,1fr)
   }
   .projects__list--right .projects__body {
+    padding-right: .9375rem;
     grid-template-columns: 100%
   }
   .projects__body {
@@ -1821,6 +1834,9 @@ button.swiper-pagination-bullet {
   }
   .projects__title {
     margin-bottom: 1.875rem
+  }
+  .projects__link {
+    margin-top: 2.5rem
   }
   .projects-all {
     padding-top: 3.125rem
@@ -2032,6 +2048,16 @@ button.swiper-pagination-bullet {
   .mission__text {
     grid-template-columns: auto
   }
+  .projects__actions {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+  }
+  .projects__actions--right {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+  }
 }
 @media (max-width:47.99875em)and (any-hover:none) {
   .icon-menu {
@@ -2164,6 +2190,9 @@ button.swiper-pagination-bullet {
   .projects__title {
     margin-bottom: clamp(1.875rem ,1.7279411765rem + .7352941176vw ,2.5rem)
   }
+  .projects__link {
+    margin-top: clamp(2.5rem ,1.3235294118rem + 5.8823529412vw ,7.5rem)
+  }
   .projects-all {
     padding-top: clamp(3.125rem ,2.3897058824rem + 3.6764705882vw ,6.25rem)
   }
@@ -2211,6 +2240,9 @@ button.swiper-pagination-bullet {
   }
 }
 @media (min-width:75em)and (max-width:105em) {
+  .projects__list--right .projects__body {
+    padding-right: clamp(.9375rem ,-15.46875rem + 21.875vw ,7.5rem)
+  }
   .projects__about {
     padding-left: clamp(.9375rem ,-15.46875rem + 21.875vw ,7.5rem)
   }
@@ -2220,7 +2252,9 @@ button.swiper-pagination-bullet {
     background-color: #009e67
   }
   .button--tr:hover {
-    border: 1px solid transparent
+    color: #fff;
+    border: 1px solid #002117;
+    background-color: #009e67
   }
   [class*=_link]:hover {
     color: #009e67

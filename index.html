@@ -6,7 +6,7 @@
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241110131842" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20241110143027" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<meta name="robots" content="noindex, nofollow" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -482,7 +482,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="video-left-slider-pagination"></div>
+								<!-- <div class="video-left-slider-pagination"></div> -->
 							</div>
 						</div>
 					</div>
@@ -670,7 +670,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="projects__actions projects__actions-right">
+							<div class="projects__actions projects__actions--right">
 								<a href="#" class="projects__button button">Request a Design</a>
 								<div class="projects__nav">
 									<button class="projects__nav-prew-right _icon-left"></button>
@@ -698,10 +698,13 @@
 										</div>
 									</div>
 								</div>
-								<div class="video-left-slider-pagination"></div>
+								<!-- <div class="video-left-slider-pagination"></div> -->
 							</div>
 						</div>
 					</div>
+				</div>
+				<div class="projects__link">
+					<a href="projects.html" class="button button--tr">Discover All Projects</a>
 				</div>
 			</section>
 			<script>
@@ -798,7 +801,7 @@
 						videosecondright.play();
 						playButtonsecondright.classList.add("hidden"); // Приховуємо кнопку
 					} else {
-						videosecond.pause();
+						videosecondright.pause();
 						playButtonsecondright.classList.remove("hidden"); // Показуємо кнопку
 					}
 				}
@@ -814,40 +817,40 @@
 				// Натискання на відео також запускає і ставить на паузу
 				videosecondright.addEventListener("click", togglePlay);
 			</script>
-			<!-- <script>
-          // Отримуємо елементи
-          const videoRight = document.getElementById("videoRight");
-          const buttonRight = document.getElementById("buttonRight");
+			<script>
+				// Отримуємо елементи
+				const videoRight = document.getElementById("videoRight");
+				const buttonRight = document.getElementById("buttonRight");
 
-          // Функція для керування відтворенням
-          function togglePlay() {
-            if (videoRight.paused) {
-              videoRight.play();
-              buttonRight.classList.add("hidden"); // Приховуємо кнопку
-            } else {
-              videoRight.pause();
-              buttonRight.classList.remove("hidden"); // Показуємо кнопку
-            }
-          }
+				// Функція для керування відтворенням
+				function togglePlay() {
+					if (videoRight.paused) {
+						videoRight.play();
+						buttonRight.classList.add("hidden"); // Приховуємо кнопку
+					} else {
+						videoRight.pause();
+						buttonRight.classList.remove("hidden"); // Показуємо кнопку
+					}
+				}
 
-          // Клік по Play
-          buttonRight.addEventListener("click", togglePlay);
+				// Клік по Play
+				buttonRight.addEventListener("click", togglePlay);
 
-          // Подія закінчення відео - показуємо кнопку Play
-          videoRight.addEventListener("ended", () => {
-            buttonRight.classList.remove("hidden");
-          });
+				// Подія закінчення відео - показуємо кнопку Play
+				videoRight.addEventListener("ended", () => {
+					buttonRight.classList.remove("hidden");
+				});
 
-          // Натискання на відео також запускає і ставить на паузу
-          videoRight.addEventListener("click", togglePlay);
-        </script> -->
+				// Натискання на відео також запускає і ставить на паузу
+				videoRight.addEventListener("click", togglePlay);
+			</script>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20241110131842"></script>
+	<script src="js/app.min.js?_v=20241110143027"></script>
 </body>
 
 </html>
