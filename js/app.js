@@ -4506,34 +4506,117 @@
             on: {}
         });
         if (document.querySelector(".projects__slider")) new swiper_core_Swiper(".projects__slider", {
-            modules: [ Pagination, Navigation ],
+            modules: [ Navigation, Parallax ],
             observer: true,
             observeParents: true,
             observeSlideChildren: true,
             slidesPerView: 1,
-            speed: 800,
-            loop: true,
+            spaceBetween: 30,
+            autoHeight: true,
+            speed: 1500,
+            parallax: true,
             navigation: {
                 prevEl: ".projects__nav-prew",
                 nextEl: ".projects__nav-next"
             }
         });
         if (document.querySelector(".video-left-slider")) new swiper_core_Swiper(".video-left-slider", {
-            modules: [ Autoplay, Navigation, Parallax ],
+            modules: [ Navigation ],
             slidesPerView: 1.2,
-            spaceBetween: 30,
-            speed: 800,
+            speed: 1500,
             navigation: {
                 prevEl: ".projects__nav-prew",
                 nextEl: ".projects__nav-next"
             },
             breakpoints: {
                 320: {
+                    slidesPerView: 1.1
+                },
+                375: {
                     slidesPerView: 1.2
                 },
+                768: {
+                    slidesPerView: 1.3
+                },
+                1221: {},
                 1921: {
-                    slidesPerView: 1.3,
-                    spaceBetween: 30
+                    slidesPerView: 1.4
+                }
+            },
+            on: {}
+        });
+        if (document.querySelector(".projects__slider-right")) new swiper_core_Swiper(".projects__slider-right", {
+            modules: [ Navigation, Parallax ],
+            observer: true,
+            observeParents: true,
+            observeSlideChildren: true,
+            slidesPerView: 1,
+            spaceBetween: 30,
+            autoHeight: true,
+            speed: 1500,
+            initialSlide: 1,
+            parallax: true,
+            navigation: {
+                prevEl: ".projects__nav-prew-right",
+                nextEl: ".projects__nav-next-right"
+            }
+        });
+        if (document.querySelector(".video-left-slider-right")) new swiper_core_Swiper(".video-left-slider-right", {
+            modules: [ Navigation ],
+            initialSlide: 1,
+            slidesPerView: 1.2,
+            speed: 1500,
+            navigation: {
+                prevEl: ".projects__nav-prew-right",
+                nextEl: ".projects__nav-next-right"
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.1
+                },
+                375: {
+                    slidesPerView: 1.2
+                },
+                768: {
+                    slidesPerView: 1.3
+                },
+                1221: {},
+                1921: {
+                    slidesPerView: 1.4
+                }
+            },
+            on: {}
+        });
+        if (document.querySelector(".projects-all__slider")) new swiper_core_Swiper(".projects-all__slider", {
+            modules: [ Autoplay ],
+            reverseDirection: true,
+            slidesPerView: 4.5,
+            speed: 1500,
+            loop: true,
+            autoplay: {
+                delay: 5e3,
+                disableOnInteraction: false
+            },
+            breakpoints: {
+                320: {
+                    spaceBetween: 10,
+                    slidesPerView: 1.1
+                },
+                375: {
+                    spaceBetween: 15,
+                    slidesPerView: 1.2
+                },
+                768: {
+                    spaceBetween: 20,
+                    slidesPerView: 3.3
+                },
+                1024: {
+                    spaceBetween: 30,
+                    slidesPerView: 3.5
+                },
+                1440: {
+                    spaceBetween: 30,
+                    slidesPerView: 4.5
                 }
             },
             on: {}
