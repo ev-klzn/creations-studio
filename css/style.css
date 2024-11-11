@@ -182,8 +182,8 @@ body {
   width: 100%
 }
 .button--tr {
-  color: #00855b;
-  border: 1px solid #00855b;
+  color: #fff;
+  border: 1px solid #fff;
   background-color: rgba(0,0,0,0)
 }
 .icon-menu {
@@ -405,6 +405,7 @@ body::after {
 }
 .swiper-button-disabled {
   color: #cecece;
+  opacity: .5;
   pointer-events: none;
   cursor: default;
   transition: all 0s
@@ -459,10 +460,31 @@ svg {
   right: 0;
   width: 63.75%
 }
+.block-header--dark::before {
+  background-color: #fff
+}
+.block-header--dark::after {
+  background-color: #fff
+}
+.block-header--reverse::after {
+  left: 0
+}
+.block-header--reverse._watcher-view:after {
+  left: 0;
+  width: 20.05%
+}
+.block-header--reverse::before {
+  left: auto;
+  right: 0
+}
+.block-header--reverse._watcher-view:before {
+  left: auto;
+  right: 0;
+  width: 63.75%
+}
 .block-header__title {
   font-family: Lora;
   font-weight: 600;
-  text-transform: capitalize;
   letter-spacing: -1.92px;
   padding-right: .9375rem;
   padding-left: 21.6%
@@ -476,6 +498,7 @@ svg {
   text-align: right
 }
 .block-header--right .block-header__title {
+  text-align: right;
   padding-left: .9375rem;
   padding-right: 21.6%;
   font-size: 2.75rem
@@ -531,6 +554,30 @@ svg {
   -webkit-transform: scale(.9);
   transform: scale(.9);
   transition: all 1.5s
+}
+.feedback__slider {
+  position: relative
+}
+.feedback__slider .feedback__swiper-pagination {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.1875rem
+}
+.feedback__slider .feedback__swiper-pagination .swiper-pagination-bullet {
+  width: 4px;
+  height: 4px;
+  border-radius: 0;
+  opacity: 1;
+  background-color: #fafafa
+}
+.feedback__slider .feedback__swiper-pagination .swiper-pagination-bullet-active {
+  width: 8px;
+  height: 8px;
+  border-radius: 0;
+  opacity: 1;
+  border: 2px solid #fafafa;
+  background-color: rgba(0,0,0,0)
 }
 .header {
   position: fixed;
@@ -881,6 +928,100 @@ video {
 .item-projects__title {
   color: #016546;
   letter-spacing: .2px
+}
+.thinking .block-header {
+  margin-bottom: 0
+}
+.thinking--dark .block-header__title {
+  text-align: left
+}
+.thinking__about {
+  display: grid;
+  justify-content: end;
+  grid-template-columns: auto 41.927083%
+}
+.thinking__body {
+  display: grid;
+  gap: 1.875rem;
+  align-content: space-between
+}
+.thinking__text {
+  color: #d1deda
+}
+.thinking__image {
+  aspect-ratio: 805/500
+}
+.feedback__list {
+  position: relative
+}
+.feedback__cnt {
+  position: relative;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem
+}
+.feedback__body {
+  display: flex;
+  align-items: center
+}
+.feedback__box {
+  -webkit-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .25));
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .25))
+}
+.feedback__wrapper {
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  background-color: #002117;
+  max-width: 50.3125rem;
+  padding-bottom: 2.5rem
+}
+.feedback__img {
+  position: relative;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 110%;
+  left: -42.5rem
+}
+.feedback__image {
+  aspect-ratio: 1645/800
+}
+.feedback__text {
+  position: relative;
+  z-index: 15;
+  color: #d1deda
+}
+.feedback__person {
+  color: #d1deda
+}
+.feedback__name {
+  color: #fff;
+  font-size: 1.0625rem;
+  letter-spacing: .17px
+}
+.feedback__project {
+  font-size: 1.0625rem;
+  color: #cecece
+}
+.feedback__actions {
+  max-width: 20.9375rem;
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+  gap: .3125rem
+}
+.feedback__nav-prew::after,
+.feedback__nav-prew::before {
+  font-size: 3.125rem;
+  color: #d1deda
+}
+.feedback__nav-next::after,
+.feedback__nav-next::before {
+  font-size: 3.125rem;
+  color: #d1deda
+}
+.feedback__pagination {
+  font-size: 1.875rem
 }
 @font-face {
   font-family: swiper-icons;
@@ -1522,12 +1663,34 @@ button.swiper-pagination-bullet {
   .projects__list--right .projects__body .projects__videos {
     order: 1
   }
+  .feedback__wrapper::after {
+    content: "";
+    position: absolute;
+    top: 2.5rem;
+    height: 6.3125rem;
+    width: 6.3125rem;
+    background: url(../img/icons/border-tr.svg) 0 0 no-repeat
+  }
+  .feedback__wrapper::before {
+    content: "";
+    position: absolute;
+    bottom: 2.5rem;
+    height: 6.25rem;
+    width: 6.25rem;
+    background: url(../img/icons/border-bl.svg) 0 0 no-repeat
+  }
 }
 @media (min-width:75em)and (min-width:105em) {
   .team__cnt::after {
     right: 3.75rem
   }
   .team__cnt::before {
+    left: 3.75rem
+  }
+  .feedback__wrapper::after {
+    right: 3.75rem
+  }
+  .feedback__wrapper::before {
     left: 3.75rem
   }
 }
@@ -1583,6 +1746,9 @@ button.swiper-pagination-bullet {
   .block-header--pb::after {
     bottom: 5rem
   }
+  .feedback__slider .feedback__swiper-pagination {
+    gap: 2.1875rem
+  }
   .header__container {
     -webkit-column-gap: 3.125rem;
     -moz-column-gap: 3.125rem;
@@ -1609,6 +1775,12 @@ button.swiper-pagination-bullet {
     padding-bottom: 7.5rem
   }
   .page__projects {
+    margin-bottom: 7.5rem
+  }
+  .page__thinking {
+    padding-bottom: 7.5rem
+  }
+  .page__feedback {
     margin-bottom: 7.5rem
   }
   .hero__title {
@@ -1688,6 +1860,30 @@ button.swiper-pagination-bullet {
   .project__text {
     margin-bottom: 4.375rem
   }
+  .thinking__about {
+    gap: 19.375rem
+  }
+  .thinking__body {
+    padding-left: 15rem
+  }
+  .feedback__cnt {
+    padding-right: 2.5rem
+  }
+  .feedback__wrapper {
+    padding-top: 7.5rem
+  }
+  .feedback__wrapper {
+    padding-right: 7.5rem
+  }
+  .feedback__wrapper {
+    padding-left: 7.5rem
+  }
+  .feedback__text {
+    margin-bottom: 4.0625rem
+  }
+  .feedback__person {
+    margin-bottom: 4.0625rem
+  }
 }
 @media (max-width:75em) {
   .team__cnt {
@@ -1702,6 +1898,16 @@ button.swiper-pagination-bullet {
   }
   .projects__about {
     padding-left: .9375rem
+  }
+  .feedback__body {
+    flex-direction: column-reverse;
+    align-items: stretch
+  }
+  .feedback__wrapper {
+    max-width: 100%
+  }
+  .feedback__img {
+    left: 0
   }
 }
 @media (max-width:48em) {
@@ -1764,6 +1970,9 @@ button.swiper-pagination-bullet {
   .block-header--pb::after {
     bottom: 2.5rem
   }
+  .feedback__slider .feedback__swiper-pagination {
+    gap: .9375rem
+  }
   .header__logo {
     gap: .9375rem
   }
@@ -1780,6 +1989,12 @@ button.swiper-pagination-bullet {
     padding-bottom: 2.5rem
   }
   .page__projects {
+    margin-bottom: 2.5rem
+  }
+  .page__thinking {
+    padding-bottom: 2.5rem
+  }
+  .page__feedback {
     margin-bottom: 2.5rem
   }
   .hero__title {
@@ -1847,6 +2062,15 @@ button.swiper-pagination-bullet {
   .project__text {
     margin-bottom: 1.875rem
   }
+  .feedback__cnt {
+    padding-right: .9375rem
+  }
+  .feedback__text {
+    margin-bottom: 1.25rem
+  }
+  .feedback__person {
+    margin-bottom: 1.25rem
+  }
 }
 @media (max-width:81.25em) {
   .offers-list {
@@ -1859,6 +2083,30 @@ button.swiper-pagination-bullet {
   }
   .hero__image__image--video {
     display: none
+  }
+  .thinking__about {
+    gap: 1.25rem;
+    grid-template-columns: auto
+  }
+  .thinking__body {
+    padding-left: .9375rem;
+    padding-right: .9375rem;
+    order: 2
+  }
+  .thinking__actions {
+    text-align: center
+  }
+  .thinking__img {
+    order: 1
+  }
+  .feedback__wrapper {
+    padding-top: 3.125rem
+  }
+  .feedback__wrapper {
+    padding-right: .9375rem
+  }
+  .feedback__wrapper {
+    padding-left: .9375rem
   }
 }
 @media (max-width:47.99875em) {
@@ -2119,6 +2367,9 @@ button.swiper-pagination-bullet {
   .block-header--pb::after {
     bottom: clamp(2.5rem ,1.9117647059rem + 2.9411764706vw ,5rem)
   }
+  .feedback__slider .feedback__swiper-pagination {
+    gap: clamp(.9375rem ,.6433823529rem + 1.4705882353vw ,2.1875rem)
+  }
   .header__logo {
     gap: clamp(.9375rem ,.8051470588rem + .6617647059vw ,1.5rem)
   }
@@ -2135,6 +2386,12 @@ button.swiper-pagination-bullet {
     padding-bottom: clamp(2.5rem ,1.3235294118rem + 5.8823529412vw ,7.5rem)
   }
   .page__projects {
+    margin-bottom: clamp(2.5rem ,1.3235294118rem + 5.8823529412vw ,7.5rem)
+  }
+  .page__thinking {
+    padding-bottom: clamp(2.5rem ,1.3235294118rem + 5.8823529412vw ,7.5rem)
+  }
+  .page__feedback {
     margin-bottom: clamp(2.5rem ,1.3235294118rem + 5.8823529412vw ,7.5rem)
   }
   .hero__title {
@@ -2202,6 +2459,15 @@ button.swiper-pagination-bullet {
   .project__text {
     margin-bottom: clamp(1.875rem ,1.2867647059rem + 2.9411764706vw ,4.375rem)
   }
+  .feedback__cnt {
+    padding-right: clamp(.9375rem ,.5698529412rem + 1.8382352941vw ,2.5rem)
+  }
+  .feedback__text {
+    margin-bottom: clamp(1.25rem ,.5882352941rem + 3.3088235294vw ,4.0625rem)
+  }
+  .feedback__person {
+    margin-bottom: clamp(1.25rem ,.5882352941rem + 3.3088235294vw ,4.0625rem)
+  }
 }
 @media (min-width:47.99875em)and (max-width:105em) {
   .header__container {
@@ -2230,12 +2496,24 @@ button.swiper-pagination-bullet {
   .team__cnt::before {
     left: clamp(.9375rem ,.2757352941rem + 3.3088235294vw ,3.75rem)
   }
+  .feedback__wrapper::after {
+    right: clamp(.9375rem ,.2757352941rem + 3.3088235294vw ,3.75rem)
+  }
+  .feedback__wrapper::before {
+    left: clamp(.9375rem ,.2757352941rem + 3.3088235294vw ,3.75rem)
+  }
 }
 @media (min-width:75em)and (max-width:20em) {
   .team__cnt::after {
     right: .9375rem
   }
   .team__cnt::before {
+    left: .9375rem
+  }
+  .feedback__wrapper::after {
+    right: .9375rem
+  }
+  .feedback__wrapper::before {
     left: .9375rem
   }
 }
@@ -2247,13 +2525,28 @@ button.swiper-pagination-bullet {
     padding-left: clamp(.9375rem ,-15.46875rem + 21.875vw ,7.5rem)
   }
 }
+@media (min-width:61.99875em)and (max-width:105em) {
+  .thinking__about {
+    gap: clamp(1.25rem ,-24.8824343769rem + 42.1499375018vw ,19.375rem)
+  }
+  .thinking__body {
+    padding-left: clamp(.9375rem ,-19.3376646028rem + 32.7025377169vw ,15rem)
+  }
+  .feedback__wrapper {
+    padding-top: clamp(3.125rem ,-3.1828289875rem + 10.1741228453vw ,7.5rem)
+  }
+  .feedback__wrapper {
+    padding-right: clamp(.9375rem ,-8.5242434813rem + 15.2611842679vw ,7.5rem)
+  }
+  .feedback__wrapper {
+    padding-left: clamp(.9375rem ,-8.5242434813rem + 15.2611842679vw ,7.5rem)
+  }
+}
 @media (any-hover:hover) {
   .button:hover {
     background-color: #009e67
   }
   .button--tr:hover {
-    color: #fff;
-    border: 1px solid #002117;
     background-color: #009e67
   }
   [class*=_link]:hover {
