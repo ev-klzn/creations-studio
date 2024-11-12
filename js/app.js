@@ -4499,6 +4499,10 @@
             touchRatio: 0,
             loop: true,
             effect: "fade",
+            autoplay: {
+                delay: 5e3,
+                disableOnInteraction: false
+            },
             pagination: {
                 el: ".hero-main__swiper-pagination",
                 clickable: true
@@ -4593,6 +4597,10 @@
             slidesPerView: 4.5,
             speed: 1500,
             loop: true,
+            autoplay: {
+                delay: 5e3,
+                disableOnInteraction: false
+            },
             breakpoints: {
                 320: {
                     spaceBetween: 10,

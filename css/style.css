@@ -186,6 +186,11 @@ body {
   border: 1px solid #fff;
   background-color: rgba(0,0,0,0)
 }
+.button--tr-dark {
+  color: #00855b;
+  border: 1px solid #00855b;
+  background-color: rgba(0,0,0,0)
+}
 .icon-menu {
   display: none
 }
@@ -2547,6 +2552,10 @@ button.swiper-pagination-bullet {
     background-color: #009e67
   }
   .button--tr:hover {
+    background-color: #009e67
+  }
+  .button--tr-dark:hover {
+    color: #fff;
     background-color: #009e67
   }
   [class*=_link]:hover {
