@@ -588,8 +588,18 @@ svg {
   border: 2px solid #fafafa;
   background-color: rgba(0,0,0,0)
 }
-.price__slider {
+.price__slider,
+.price__slider-bottom {
   position: relative
+}
+.price__slider .swiper-wrapper,
+.price__slider-bottom .swiper-wrapper {
+  display: flex;
+  align-items: stretch
+}
+.price__slider .swiper-slide,
+.price__slider-bottom .swiper-slide {
+  align-self: stretch
 }
 .price__slider-bottom {
   position: relative
@@ -1073,7 +1083,8 @@ video {
   position: relative
 }
 .price__cnt {
-  position: relative
+  position: relative;
+  height: 100%
 }
 .price__list>*:nth-child(even) {
   margin-bottom: 0;
@@ -1083,10 +1094,21 @@ video {
   background-color: #016546;
   position: relative;
   margin-right: 1.875rem;
-  margin-left: 1.875rem
+  margin-left: 1.875rem;
+  height: 100%
 }
 .price__box {
+  height: 100%;
   position: relative
+}
+.price__wrapper {
+  height: 100%
+}
+.price__body {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column
 }
 .price__title {
   color: #fff;
@@ -1098,7 +1120,7 @@ video {
 }
 .price__action {
   display: flex;
-  gap: 1.25rem;
+  gap: .3125rem;
   justify-content: space-between;
   align-items: flex-end;
   align-self: stretch;
@@ -1742,8 +1764,6 @@ button.swiper-pagination-bullet {
   .price__wrapper::before {
     content: "";
     position: absolute;
-    bottom: -1.75rem;
-    right: -1.75rem;
     z-index: 1;
     height: 12.5rem;
     width: 12.5rem;
@@ -1762,10 +1782,10 @@ button.swiper-pagination-bullet {
 }
 @media (min-width:47.99875em)and (min-width:105em) {
   .price__wrapper::before {
-    bottom: -1.75rem
+    bottom: -1.8125rem
   }
   .price__wrapper::before {
-    right: -1.75rem
+    right: -1.8125rem
   }
   .price__wrapper::after {
     left: 2.375rem
@@ -2351,17 +2371,20 @@ button.swiper-pagination-bullet {
     font-size: 1.75rem
   }
 }
-@media (max-width:81.25em) {
-  .offers-list {
-    grid-template-columns: auto
-  }
+@media (max-width:90.625em) {
   .price__action {
     flex-direction: column-reverse;
-    align-items: center
+    align-items: center;
+    gap: 1.25rem
   }
   .price__button {
     width: 100%;
     justify-content: center
+  }
+}
+@media (max-width:81.25em) {
+  .offers-list {
+    grid-template-columns: auto
   }
 }
 @media (max-width:61.99875em) {
@@ -2906,10 +2929,10 @@ button.swiper-pagination-bullet {
 }
 @media (min-width:47.99875em)and (min-width:20em)and (max-width:105em) {
   .price__wrapper::before {
-    bottom: clamp(-1.75rem ,-.1286764706rem + -1.5441176471vw ,-.4375rem)
+    bottom: clamp(-1.8125rem ,-.1911764706rem + -1.5441176471vw ,-.5rem)
   }
   .price__wrapper::before {
-    right: clamp(-1.75rem ,-.1286764706rem + -1.5441176471vw ,-.4375rem)
+    right: clamp(-1.8125rem ,-.1911764706rem + -1.5441176471vw ,-.5rem)
   }
   .price__wrapper::after {
     left: clamp(.3125rem ,-.1727941176rem + 2.4264705882vw ,2.375rem)
@@ -2920,10 +2943,10 @@ button.swiper-pagination-bullet {
 }
 @media (min-width:47.99875em)and (max-width:20em) {
   .price__wrapper::before {
-    bottom: -.4375rem
+    bottom: -.5rem
   }
   .price__wrapper::before {
-    right: -.4375rem
+    right: -.5rem
   }
   .price__wrapper::after {
     left: .3125rem

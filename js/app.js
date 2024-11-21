@@ -4659,12 +4659,10 @@
             },
             breakpoints: {
                 320: {
-                    slidesPerView: 1.11,
-                    autoHeight: true
+                    slidesPerView: 1.11
                 },
                 640: {
-                    slidesPerView: 1.2,
-                    autoHeight: true
+                    slidesPerView: 1.2
                 },
                 768: {
                     slidesPerView: 2.2
@@ -4689,7 +4687,7 @@
             observer: true,
             observeParents: true,
             autoHeight: true,
-            initialSlide: 3,
+            initialSlide: 2,
             speed: 1500,
             rtl: true,
             navigation: {
@@ -4698,12 +4696,10 @@
             },
             breakpoints: {
                 320: {
-                    slidesPerView: 1.11,
-                    autoHeight: true
+                    slidesPerView: 1.11
                 },
                 640: {
-                    slidesPerView: 1.2,
-                    autoHeight: true
+                    slidesPerView: 1.2
                 },
                 768: {
                     slidesPerView: 2
