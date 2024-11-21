@@ -186,10 +186,14 @@ body {
   border: 1px solid #fff;
   background-color: rgba(0,0,0,0)
 }
-.button--tr-dark {
+.button--trdark {
   color: #00855b;
   border: 1px solid #00855b;
   background-color: rgba(0,0,0,0)
+}
+.button--green {
+  color: #fff;
+  border: 1px solid #d1deda
 }
 .icon-menu {
   display: none
@@ -583,6 +587,43 @@ svg {
   opacity: 1;
   border: 2px solid #fafafa;
   background-color: rgba(0,0,0,0)
+}
+.price__slider {
+  position: relative
+}
+.price__slider-bottom {
+  position: relative
+}
+.price-button-prev {
+  position: absolute;
+  z-index: 998;
+  top: 50%;
+  -webkit-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+  transition: all .5s
+}
+.price-button-prev::before {
+  content: "";
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: url(../img/icons/slider-left.svg) 0 0 no-repeat
+}
+.price-button-next {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  -webkit-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+  font-size: 3.125rem;
+  transition: all .5s
+}
+.price-button-next::before {
+  content: "";
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: url(../img/icons/slider-right.svg) 0 0 no-repeat
 }
 .header {
   position: fixed;
@@ -1027,6 +1068,65 @@ video {
 }
 .feedback__pagination {
   font-size: 1.875rem
+}
+.price__list {
+  position: relative
+}
+.price__cnt {
+  position: relative
+}
+.price__list>*:nth-child(even) {
+  margin-bottom: 0;
+  padding-bottom: 3.75rem
+}
+.price__item {
+  background-color: #016546;
+  position: relative;
+  margin-right: 1.875rem;
+  margin-left: 1.875rem
+}
+.price__box {
+  position: relative
+}
+.price__title {
+  color: #fff;
+  margin-bottom: 1.25rem;
+  padding: 0 .9375rem
+}
+.price__text {
+  padding: 0 .9375rem
+}
+.price__action {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+  padding: 0 .9375rem
+}
+.price__cost {
+  display: flex;
+  gap: .625rem;
+  justify-content: center;
+  align-items: center
+}
+.price__from {
+  color: #fff;
+  text-align: right;
+  font-size: 1.0625rem;
+  letter-spacing: .010625rem
+}
+.price__value {
+  color: #fff;
+  text-align: right;
+  font-family: Lora;
+  letter-spacing: -.105rem
+}
+.price__area {
+  color: #fff;
+  text-align: right;
+  font-size: 1.0625rem;
+  letter-spacing: .010625rem
 }
 @font-face {
   font-family: swiper-icons;
@@ -1638,6 +1738,42 @@ button.swiper-pagination-bullet {
   backface-visibility: hidden;
   overflow: hidden
 }
+@media (min-width:47.99875em) {
+  .price__wrapper::before {
+    content: "";
+    position: absolute;
+    bottom: -1.75rem;
+    right: -1.75rem;
+    z-index: 1;
+    height: 12.5rem;
+    width: 12.5rem;
+    aspect-ratio: 1/1;
+    background: url(../img/icons/price-decor.svg) 0 0 no-repeat
+  }
+  .price__wrapper::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    aspect-ratio: 1/1;
+    height: 3.625rem;
+    width: 3.625rem;
+    background: url(../img/icons/price-decor-left.svg) 0 0 no-repeat
+  }
+}
+@media (min-width:47.99875em)and (min-width:105em) {
+  .price__wrapper::before {
+    bottom: -1.75rem
+  }
+  .price__wrapper::before {
+    right: -1.75rem
+  }
+  .price__wrapper::after {
+    left: 2.375rem
+  }
+  .price__wrapper::after {
+    top: 2.375rem
+  }
+}
 @media (min-width:120.0625em) {
   .gallery {
     display: grid;
@@ -1754,6 +1890,24 @@ button.swiper-pagination-bullet {
   .feedback__slider .feedback__swiper-pagination {
     gap: 2.1875rem
   }
+  .price-button-prev {
+    height: 3.75rem
+  }
+  .price-button-prev {
+    width: 3.75rem
+  }
+  .price-button-prev {
+    left: -3.125rem
+  }
+  .price-button-next {
+    height: 3.75rem
+  }
+  .price-button-next {
+    width: 3.75rem
+  }
+  .price-button-next {
+    right: -3.75rem
+  }
   .header__container {
     -webkit-column-gap: 3.125rem;
     -moz-column-gap: 3.125rem;
@@ -1786,6 +1940,9 @@ button.swiper-pagination-bullet {
     padding-bottom: 7.5rem
   }
   .page__feedback {
+    margin-bottom: 7.5rem
+  }
+  .page__price {
     margin-bottom: 7.5rem
   }
   .hero__title {
@@ -1889,6 +2046,54 @@ button.swiper-pagination-bullet {
   .feedback__person {
     margin-bottom: 4.0625rem
   }
+  .price__list>*:nth-child(odd) {
+    margin-left: 5.625rem
+  }
+  .price__list>*:nth-child(odd) {
+    margin-bottom: 5.625rem
+  }
+  .price__list>*:nth-child(even) {
+    margin-right: 5.625rem
+  }
+  .price__item {
+    margin-left: 1.875rem
+  }
+  .price__item {
+    margin-right: 1.875rem
+  }
+  .price__box {
+    padding-right: 1.75rem
+  }
+  .price__box {
+    padding-bottom: 1.75rem
+  }
+  .price__wrapper {
+    padding-top: 1.75rem
+  }
+  .price__wrapper {
+    padding-left: 1.75rem
+  }
+  .price__body {
+    padding-top: 2.5rem
+  }
+  .price__body {
+    padding-bottom: 2.5rem
+  }
+  .price__body {
+    padding-left: 1.25rem
+  }
+  .price__body {
+    padding-right: 1.25rem
+  }
+  .price__title {
+    font-size: 2rem
+  }
+  .price__text {
+    margin-bottom: 3.75rem
+  }
+  .price__value {
+    font-size: 2.625rem
+  }
 }
 @media (max-width:75em) {
   .team__cnt {
@@ -1978,6 +2183,24 @@ button.swiper-pagination-bullet {
   .feedback__slider .feedback__swiper-pagination {
     gap: .9375rem
   }
+  .price-button-prev {
+    height: 2.5rem
+  }
+  .price-button-prev {
+    width: 2.5rem
+  }
+  .price-button-prev {
+    left: -3.125rem
+  }
+  .price-button-next {
+    height: 2.5rem
+  }
+  .price-button-next {
+    width: 2.5rem
+  }
+  .price-button-next {
+    right: -3.75rem
+  }
   .header__logo {
     gap: .9375rem
   }
@@ -2000,6 +2223,9 @@ button.swiper-pagination-bullet {
     padding-bottom: 2.5rem
   }
   .page__feedback {
+    margin-bottom: 2.5rem
+  }
+  .page__price {
     margin-bottom: 2.5rem
   }
   .hero__title {
@@ -2076,10 +2302,66 @@ button.swiper-pagination-bullet {
   .feedback__person {
     margin-bottom: 1.25rem
   }
+  .price__list>*:nth-child(odd) {
+    margin-left: 3.75rem
+  }
+  .price__list>*:nth-child(odd) {
+    margin-bottom: .0000000625rem
+  }
+  .price__list>*:nth-child(even) {
+    margin-right: 3.75rem
+  }
+  .price__item {
+    margin-left: .4375rem
+  }
+  .price__item {
+    margin-right: .4375rem
+  }
+  .price__box {
+    padding-right: .0000000625rem
+  }
+  .price__box {
+    padding-bottom: .9375rem
+  }
+  .price__wrapper {
+    padding-top: .9375rem
+  }
+  .price__wrapper {
+    padding-left: .0000000625rem
+  }
+  .price__body {
+    padding-top: .0000000625rem
+  }
+  .price__body {
+    padding-bottom: .0000000625rem
+  }
+  .price__body {
+    padding-left: .0000000625rem
+  }
+  .price__body {
+    padding-right: .0000000625rem
+  }
+  .price__title {
+    font-size: 1.5rem
+  }
+  .price__text {
+    margin-bottom: 2.5rem
+  }
+  .price__value {
+    font-size: 1.75rem
+  }
 }
 @media (max-width:81.25em) {
   .offers-list {
     grid-template-columns: auto
+  }
+  .price__action {
+    flex-direction: column-reverse;
+    align-items: center
+  }
+  .price__button {
+    width: 100%;
+    justify-content: center
   }
 }
 @media (max-width:61.99875em) {
@@ -2112,6 +2394,12 @@ button.swiper-pagination-bullet {
   }
   .feedback__wrapper {
     padding-left: .9375rem
+  }
+  .price__list>*:nth-child(odd) {
+    margin-left: 0
+  }
+  .price__list>*:nth-child(even) {
+    margin-right: 0
   }
 }
 @media (max-width:47.99875em) {
@@ -2375,6 +2663,24 @@ button.swiper-pagination-bullet {
   .feedback__slider .feedback__swiper-pagination {
     gap: clamp(.9375rem ,.6433823529rem + 1.4705882353vw ,2.1875rem)
   }
+  .price-button-prev {
+    height: clamp(2.5rem ,2.2058823529rem + 1.4705882353vw ,3.75rem)
+  }
+  .price-button-prev {
+    width: clamp(2.5rem ,2.2058823529rem + 1.4705882353vw ,3.75rem)
+  }
+  .price-button-prev {
+    left: clamp(-3.125rem ,-3.125rem + 0 ,-3.125rem)
+  }
+  .price-button-next {
+    height: clamp(2.5rem ,2.2058823529rem + 1.4705882353vw ,3.75rem)
+  }
+  .price-button-next {
+    width: clamp(2.5rem ,2.2058823529rem + 1.4705882353vw ,3.75rem)
+  }
+  .price-button-next {
+    right: clamp(-3.75rem ,-3.75rem + 0 ,-3.75rem)
+  }
   .header__logo {
     gap: clamp(.9375rem ,.8051470588rem + .6617647059vw ,1.5rem)
   }
@@ -2397,6 +2703,9 @@ button.swiper-pagination-bullet {
     padding-bottom: clamp(2.5rem ,1.3235294118rem + 5.8823529412vw ,7.5rem)
   }
   .page__feedback {
+    margin-bottom: clamp(2.5rem ,1.3235294118rem + 5.8823529412vw ,7.5rem)
+  }
+  .page__price {
     margin-bottom: clamp(2.5rem ,1.3235294118rem + 5.8823529412vw ,7.5rem)
   }
   .hero__title {
@@ -2473,6 +2782,54 @@ button.swiper-pagination-bullet {
   .feedback__person {
     margin-bottom: clamp(1.25rem ,.5882352941rem + 3.3088235294vw ,4.0625rem)
   }
+  .price__list>*:nth-child(odd) {
+    margin-left: clamp(3.75rem ,3.3088235294rem + 2.2058823529vw ,5.625rem)
+  }
+  .price__list>*:nth-child(odd) {
+    margin-bottom: clamp(.0000000625rem ,-1.3235293346rem + 6.6176469853vw ,5.625rem)
+  }
+  .price__list>*:nth-child(even) {
+    margin-right: clamp(3.75rem ,3.3088235294rem + 2.2058823529vw ,5.625rem)
+  }
+  .price__item {
+    margin-left: clamp(.4375rem ,.0992647059rem + 1.6911764706vw ,1.875rem)
+  }
+  .price__item {
+    margin-right: clamp(.4375rem ,.0992647059rem + 1.6911764706vw ,1.875rem)
+  }
+  .price__box {
+    padding-right: clamp(.0000000625rem ,-.4117646287rem + 2.0588234559vw ,1.75rem)
+  }
+  .price__box {
+    padding-bottom: clamp(.9375rem ,.7463235294rem + .9558823529vw ,1.75rem)
+  }
+  .price__wrapper {
+    padding-top: clamp(.9375rem ,.7463235294rem + .9558823529vw ,1.75rem)
+  }
+  .price__wrapper {
+    padding-left: clamp(.0000000625rem ,-.4117646287rem + 2.0588234559vw ,1.75rem)
+  }
+  .price__body {
+    padding-top: clamp(.0000000625rem ,-.5882352169rem + 2.9411763971vw ,2.5rem)
+  }
+  .price__body {
+    padding-bottom: clamp(.0000000625rem ,-.5882352169rem + 2.9411763971vw ,2.5rem)
+  }
+  .price__body {
+    padding-left: clamp(.0000000625rem ,-.2941175699rem + 1.4705881618vw ,1.25rem)
+  }
+  .price__body {
+    padding-right: clamp(.0000000625rem ,-.2941175699rem + 1.4705881618vw ,1.25rem)
+  }
+  .price__title {
+    font-size: clamp(1.5rem ,1.3823529412rem + .5882352941vw ,2rem)
+  }
+  .price__text {
+    margin-bottom: clamp(2.5rem ,2.2058823529rem + 1.4705882353vw ,3.75rem)
+  }
+  .price__value {
+    font-size: clamp(1.75rem ,1.5441176471rem + 1.0294117647vw ,2.625rem)
+  }
 }
 @media (min-width:47.99875em)and (max-width:105em) {
   .header__container {
@@ -2547,6 +2904,34 @@ button.swiper-pagination-bullet {
     padding-left: clamp(.9375rem ,-8.5242434813rem + 15.2611842679vw ,7.5rem)
   }
 }
+@media (min-width:47.99875em)and (min-width:20em)and (max-width:105em) {
+  .price__wrapper::before {
+    bottom: clamp(-1.75rem ,-.1286764706rem + -1.5441176471vw ,-.4375rem)
+  }
+  .price__wrapper::before {
+    right: clamp(-1.75rem ,-.1286764706rem + -1.5441176471vw ,-.4375rem)
+  }
+  .price__wrapper::after {
+    left: clamp(.3125rem ,-.1727941176rem + 2.4264705882vw ,2.375rem)
+  }
+  .price__wrapper::after {
+    top: clamp(.3125rem ,-.1727941176rem + 2.4264705882vw ,2.375rem)
+  }
+}
+@media (min-width:47.99875em)and (max-width:20em) {
+  .price__wrapper::before {
+    bottom: -.4375rem
+  }
+  .price__wrapper::before {
+    right: -.4375rem
+  }
+  .price__wrapper::after {
+    left: .3125rem
+  }
+  .price__wrapper::after {
+    top: .3125rem
+  }
+}
 @media (any-hover:hover) {
   .button:hover {
     background-color: #009e67
@@ -2554,12 +2939,23 @@ button.swiper-pagination-bullet {
   .button--tr:hover {
     background-color: #009e67
   }
-  .button--tr-dark:hover {
+  .button--trdark:hover {
     color: #fff;
+    background-color: #009e67
+  }
+  .button--green:hover {
+    color: #fff;
+    border: 1px solid #fff;
     background-color: #009e67
   }
   [class*=_link]:hover {
     color: #009e67
+  }
+  .price-button-prev:hover {
+    opacity: .6
+  }
+  .price-button-next:hover {
+    opacity: .6
   }
   .menu__link:hover {
     color: #009e67

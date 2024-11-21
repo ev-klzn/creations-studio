@@ -4499,10 +4499,6 @@
             touchRatio: 0,
             loop: true,
             effect: "fade",
-            autoplay: {
-                delay: 5e3,
-                disableOnInteraction: false
-            },
             pagination: {
                 el: ".hero-main__swiper-pagination",
                 clickable: true
@@ -4597,10 +4593,6 @@
             slidesPerView: 4.5,
             speed: 1500,
             loop: true,
-            autoplay: {
-                delay: 5e3,
-                disableOnInteraction: false
-            },
             breakpoints: {
                 320: {
                     spaceBetween: 10,
@@ -4652,6 +4644,82 @@
             navigation: {
                 prevEl: ".feedback__nav-prew",
                 nextEl: ".feedback__nav-next"
+            },
+            on: {}
+        });
+        if (document.querySelector(".price__slider")) new swiper_core_Swiper(".price__slider", {
+            modules: [ Navigation ],
+            observer: true,
+            observeParents: true,
+            autoHeight: true,
+            speed: 1500,
+            navigation: {
+                prevEl: ".price-button-prev",
+                nextEl: ".price-button-next"
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.11,
+                    autoHeight: true
+                },
+                640: {
+                    slidesPerView: 1.2,
+                    autoHeight: true
+                },
+                768: {
+                    slidesPerView: 2.2
+                },
+                1024: {
+                    slidesPerView: 2.2
+                },
+                1268: {
+                    slidesPerView: 2.3
+                },
+                1440: {
+                    slidesPerView: 2.3
+                },
+                1650: {
+                    slidesPerView: 2.5
+                }
+            },
+            on: {}
+        });
+        if (document.querySelector(".price__slider-bottom")) new swiper_core_Swiper(".price__slider-bottom", {
+            modules: [ Navigation ],
+            observer: true,
+            observeParents: true,
+            autoHeight: true,
+            initialSlide: 3,
+            speed: 1500,
+            rtl: true,
+            navigation: {
+                prevEl: ".price-button-next",
+                nextEl: ".price-button-prev"
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.11,
+                    autoHeight: true
+                },
+                640: {
+                    slidesPerView: 1.2,
+                    autoHeight: true
+                },
+                768: {
+                    slidesPerView: 2
+                },
+                1024: {
+                    slidesPerView: 2.2
+                },
+                1268: {
+                    slidesPerView: 2.3
+                },
+                1440: {
+                    slidesPerView: 2.3
+                },
+                1650: {
+                    slidesPerView: 2.5
+                }
             },
             on: {}
         });
