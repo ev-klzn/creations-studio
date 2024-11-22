@@ -1248,7 +1248,11 @@ video {
 .follow__list {
   display: flex;
   gap: 1.875rem;
-  overflow: scroll
+  overflow-x: scroll;
+  scrollbar-width: none
+}
+.follow__list::-webkit-scrollbar {
+  display: none
 }
 .follow__item {
   flex: 1 0 24.375rem
