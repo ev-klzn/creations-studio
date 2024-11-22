@@ -6,7 +6,7 @@
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241121174044" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20241122182735" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<meta name="robots" content="noindex, nofollow" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -702,7 +702,7 @@
 					</div>
 				</div>
 				<div class="projects__link">
-					<a href="projects.html" class="button button--tr-dark">Discover All Projects</a>
+					<a href="projects.html" class="button button--trgreen">Discover All Projects</a>
 				</div>
 			</section>
 			<script>
@@ -1241,13 +1241,73 @@
 					</div>
 				</div>
 			</section>
+			<section class="page__talk talk">
+				<div data-watch data-watch-once class="block-header block-header--pbplus">
+					<h2 class="block-header__title">
+						Let’s Talk About <span>Your Project!</span>
+					</h2>
+				</div>
+				<div class="talk__wrapper">
+					<div class="talk__text text">
+						<p>
+							We are ready to load you into the exciting world of architecture
+							and interior design.
+						</p>
+						<p>
+							Our team of experts is dedicated to transforming your vision
+							into reality, ensuring every detail reflects your unique style.
+							Let us guide you on this creative journey to elevate your living
+							spaces.
+						</p>
+					</div>
+					<form method="POST" action="/contact" netlify id="talk-form" name="talk" class="talk__form">
+						<div class="talk__form-wrapper">
+							<div class="talk__inputs">
+								<input type="text" name="form[name]" id="name-talk" data-error="Incorect name" data-required="text" autocomplete="off" required placeholder="Name" class="talk__input input" />
+								<input data-validate required type="email" name="form[email]" id="email-talk" data-error="Incorect email" data-required="email" placeholder="E-mail" class="talk__input input" />
+								<input pattern="^\d{10,12}$" type="tel" name="form[tel]" id="tel-talk" autocomplete="off" placeholder="Phone" class="talk__input input" />
+								<textarea required data-autoheight id="message-talk" class="talk__input input" name="form[message]" placeholder="Message"></textarea>
+							</div>
+							<div class="talk__actions">
+								<button data-watch type="submit" class="talk__button button">
+									Send Request
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</section>
+			<section class="page__follow follow follow--dark">
+				<div data-watch data-watch-once class="block-header block-header--dark block-header--reverse block-header--pb">
+					<h2 class="block-header__title">
+						Follow
+						<span><a class="block-header__link" href="#">@Creations_Studio</a></span>
+					</h2>
+				</div>
+				<div class="follow__wrapper">
+					<div class="follow__list">
+						<div class="follow__item">
+							<img class="follow__image ibg" src="img/follow/1.webp" alt="Image" />
+						</div>
+						<div class="follow__item">
+							<img class="follow__image ibg" src="img/follow/2.webp" alt="Image" />
+						</div>
+						<div class="follow__item">
+							<img class="follow__image ibg" src="img/follow/3.webp" alt="Image" />
+						</div>
+						<div class="follow__item">
+							<img class="follow__image ibg" src="img/follow/4.webp" alt="Image" />
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20241121174044"></script>
+	<script src="js/app.min.js?_v=20241122182735"></script>
 </body>
 
 </html>

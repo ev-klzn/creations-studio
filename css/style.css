@@ -186,6 +186,11 @@ body {
   border: 1px solid #fff;
   background-color: rgba(0,0,0,0)
 }
+.button--trgreen {
+  color: #00855b;
+  border: 1px solid #00855b;
+  background-color: rgba(0,0,0,0)
+}
 .button--trdark {
   color: #00855b;
   border: 1px solid #00855b;
@@ -194,6 +199,52 @@ body {
 .button--green {
   color: #fff;
   border: 1px solid #d1deda
+}
+input[type=email],
+input[type=tel],
+input[type=text],
+textarea {
+  -webkit-appearance: none;
+  appearance: none
+}
+.input {
+  border-radius: 0!important;
+  width: 100%;
+  display: block;
+  padding: 0 0;
+  border: 1px solid transparent;
+  caret-color: inherit
+}
+.input[placeholder]:not([data-placeholder-nohiden])::-webkit-input-placeholder {
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s
+}
+.input[placeholder]:not([data-placeholder-nohiden]):-ms-input-placeholder {
+  -ms-transition: opacity .5s;
+  transition: opacity .5s
+}
+.input[placeholder]:not([data-placeholder-nohiden])::-ms-input-placeholder {
+  -ms-transition: opacity .5s;
+  transition: opacity .5s
+}
+.input[placeholder]:not([data-placeholder-nohiden])::placeholder {
+  transition: opacity .5s
+}
+.input[placeholder]:not([data-placeholder-nohiden]):focus::-webkit-input-placeholder {
+  opacity: 0
+}
+.input[placeholder]:not([data-placeholder-nohiden]):focus:-ms-input-placeholder {
+  opacity: 0
+}
+.input[placeholder]:not([data-placeholder-nohiden]):focus::-ms-input-placeholder {
+  opacity: 0
+}
+.input[placeholder]:not([data-placeholder-nohiden]):focus::placeholder {
+  opacity: 0
+}
+textarea.input {
+  resize: none;
+  padding: 0 0
 }
 .icon-menu {
   display: none
@@ -410,7 +461,7 @@ body::after {
   background-color: #002117
 }
 [class*=_link] {
-  transition: color .3s
+  transition: color .5s
 }
 .swiper-button-disabled {
   color: #cecece;
@@ -540,7 +591,9 @@ svg {
   height: 4px;
   border-radius: 0;
   opacity: 1;
-  background-color: #fafafa
+  border: 2px solid transparent;
+  background-color: #fafafa;
+  transition: all 1.5s
 }
 .hero-main__slider .hero-main__swiper-pagination .swiper-pagination-bullet-active {
   width: 8px;
@@ -578,7 +631,9 @@ svg {
   height: 4px;
   border-radius: 0;
   opacity: 1;
-  background-color: #fafafa
+  border: 2px solid transparent;
+  background-color: #fafafa;
+  transition: all 1.5s
 }
 .feedback__slider .feedback__swiper-pagination .swiper-pagination-bullet-active {
   width: 8px;
@@ -895,7 +950,7 @@ video {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: opacity .3s
+  transition: opacity .5s
 }
 .play-button img,
 .play-button-right img {
@@ -1066,10 +1121,16 @@ video {
   position: relative;
   gap: .3125rem
 }
+.feedback__nav-prew {
+  transition: all .5s
+}
 .feedback__nav-prew::after,
 .feedback__nav-prew::before {
   font-size: 3.125rem;
   color: #d1deda
+}
+.feedback__nav-next {
+  transition: all .5s
 }
 .feedback__nav-next::after,
 .feedback__nav-next::before {
@@ -1149,6 +1210,51 @@ video {
   text-align: right;
   font-size: 1.0625rem;
   letter-spacing: .010625rem
+}
+.talk textarea {
+  line-height: 1
+}
+.talk__wrapper {
+  margin: 0 auto;
+  padding-left: .9375rem;
+  padding-right: .9375rem;
+  max-width: 87.5rem
+}
+.talk__form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 3.75rem
+}
+.talk__inputs {
+  display: grid;
+  flex: 1 1 auto;
+  grid-template-columns: repeat(2,1fr)
+}
+.talk__input {
+  border-bottom: 1px solid #00855b;
+  padding-bottom: .625rem
+}
+.talk__button {
+  flex: 1 1 15.625rem
+}
+.follow .block-header__title {
+  text-align: left
+}
+.follow__wrapper {
+  max-width: 103.125rem;
+  margin: auto
+}
+.follow__list {
+  display: flex;
+  gap: 1.875rem;
+  overflow: scroll
+}
+.follow__item {
+  flex: 1 0 24.375rem
+}
+.follow__image {
+  aspect-ratio: 390/390
 }
 @font-face {
   font-family: swiper-icons;
@@ -1871,12 +1977,6 @@ button.swiper-pagination-bullet {
   .wrap-cnt {
     padding-right: 3.875rem
   }
-  .wrap-cnt--wide {
-    padding-left: 7.5rem
-  }
-  .wrap-cnt--wide {
-    padding-right: 7.5rem
-  }
   .block-header {
     padding-bottom: 7.5rem
   }
@@ -1906,6 +2006,12 @@ button.swiper-pagination-bullet {
   }
   .block-header--pb::after {
     bottom: 5rem
+  }
+  .block-header--pbplus {
+    padding-bottom: 6.25rem
+  }
+  .block-header--pbplus::after {
+    bottom: 6.25rem
   }
   .feedback__slider .feedback__swiper-pagination {
     gap: 2.1875rem
@@ -1962,7 +2068,10 @@ button.swiper-pagination-bullet {
   .page__feedback {
     margin-bottom: 7.5rem
   }
-  .page__price {
+  .page__talk {
+    margin-bottom: 7.5rem
+  }
+  .page__follow {
     margin-bottom: 7.5rem
   }
   .hero__title {
@@ -2114,6 +2223,28 @@ button.swiper-pagination-bullet {
   .price__value {
     font-size: 2.625rem
   }
+  .talk__text {
+    margin-bottom: 3.75rem
+  }
+  .talk__inputs {
+    -webkit-column-gap: 3.75rem;
+    -moz-column-gap: 3.75rem;
+    column-gap: 3.75rem
+  }
+  .talk__inputs {
+    row-gap: 2.5rem
+  }
+  .follow__list {
+    padding-bottom: 7.5rem
+  }
+}
+@media (min-width:120em) {
+  .wrap-cnt--wide {
+    padding-left: 7.5rem
+  }
+  .wrap-cnt--wide {
+    padding-right: 7.5rem
+  }
 }
 @media (max-width:75em) {
   .team__cnt {
@@ -2140,12 +2271,32 @@ button.swiper-pagination-bullet {
     left: 0
   }
 }
+@media (max-width:60em) {
+  .talk__inputs {
+    grid-template-columns: auto;
+    gap: 2.5rem
+  }
+}
 @media (max-width:48em) {
   .team__cnt {
     padding-left: .0000000625rem
   }
   .team__cnt {
     padding-right: .0000000625rem
+  }
+  .talk__actions {
+    margin: 0 auto
+  }
+  .talk__form-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 35rem;
+    margin: 0 auto
+  }
+}
+@media (max-width:48em)and (max-width:20em) {
+  .talk__form-wrapper {
+    gap: 2.5rem
   }
 }
 @media (max-width:20em) {
@@ -2200,6 +2351,12 @@ button.swiper-pagination-bullet {
   .block-header--pb::after {
     bottom: 2.5rem
   }
+  .block-header--pbplus {
+    padding-bottom: 2.5rem
+  }
+  .block-header--pbplus::after {
+    bottom: 2.5rem
+  }
   .feedback__slider .feedback__swiper-pagination {
     gap: .9375rem
   }
@@ -2245,7 +2402,10 @@ button.swiper-pagination-bullet {
   .page__feedback {
     margin-bottom: 2.5rem
   }
-  .page__price {
+  .page__talk {
+    margin-bottom: 2.5rem
+  }
+  .page__follow {
     margin-bottom: 2.5rem
   }
   .hero__title {
@@ -2369,6 +2529,20 @@ button.swiper-pagination-bullet {
   }
   .price__value {
     font-size: 1.75rem
+  }
+  .talk__text {
+    margin-bottom: 2.5rem
+  }
+  .talk__inputs {
+    -webkit-column-gap: 2.5rem;
+    -moz-column-gap: 2.5rem;
+    column-gap: 2.5rem
+  }
+  .talk__inputs {
+    row-gap: 1.875rem
+  }
+  .follow__list {
+    padding-bottom: 2.5rem
   }
 }
 @media (max-width:90.625em) {
@@ -2631,6 +2805,16 @@ button.swiper-pagination-bullet {
     cursor: default
   }
 }
+@media (max-width:29.99875em) {
+  .follow__list {
+    gap: 1.25rem
+  }
+}
+@media (max-width:26.5625em) {
+  .follow__item {
+    flex: 1 0 18.75rem
+  }
+}
 @media (min-width:20em)and (max-width:105em) {
   .button {
     padding-left: clamp(1.875rem ,1.4338235294rem + 2.2058823529vw ,3.75rem)
@@ -2646,12 +2830,6 @@ button.swiper-pagination-bullet {
   }
   .wrap-cnt {
     padding-right: clamp(.9375rem ,.2463235294rem + 3.4558823529vw ,3.875rem)
-  }
-  .wrap-cnt--wide {
-    padding-left: clamp(.9375rem ,-.6066176471rem + 7.7205882353vw ,7.5rem)
-  }
-  .wrap-cnt--wide {
-    padding-right: clamp(.9375rem ,-.6066176471rem + 7.7205882353vw ,7.5rem)
   }
   .block-header {
     padding-bottom: clamp(3.125rem ,2.0955882353rem + 5.1470588235vw ,7.5rem)
@@ -2682,6 +2860,12 @@ button.swiper-pagination-bullet {
   }
   .block-header--pb::after {
     bottom: clamp(2.5rem ,1.9117647059rem + 2.9411764706vw ,5rem)
+  }
+  .block-header--pbplus {
+    padding-bottom: clamp(2.5rem ,1.6176470588rem + 4.4117647059vw ,6.25rem)
+  }
+  .block-header--pbplus::after {
+    bottom: clamp(2.5rem ,1.6176470588rem + 4.4117647059vw ,6.25rem)
   }
   .feedback__slider .feedback__swiper-pagination {
     gap: clamp(.9375rem ,.6433823529rem + 1.4705882353vw ,2.1875rem)
@@ -2728,7 +2912,10 @@ button.swiper-pagination-bullet {
   .page__feedback {
     margin-bottom: clamp(2.5rem ,1.3235294118rem + 5.8823529412vw ,7.5rem)
   }
-  .page__price {
+  .page__talk {
+    margin-bottom: clamp(2.5rem ,1.3235294118rem + 5.8823529412vw ,7.5rem)
+  }
+  .page__follow {
     margin-bottom: clamp(2.5rem ,1.3235294118rem + 5.8823529412vw ,7.5rem)
   }
   .hero__title {
@@ -2853,6 +3040,36 @@ button.swiper-pagination-bullet {
   .price__value {
     font-size: clamp(1.75rem ,1.5441176471rem + 1.0294117647vw ,2.625rem)
   }
+  .talk__text {
+    margin-bottom: clamp(2.5rem ,2.2058823529rem + 1.4705882353vw ,3.75rem)
+  }
+  .talk__inputs {
+    -webkit-column-gap: clamp(2.5rem ,2.2058823529rem + 1.4705882353vw ,3.75rem);
+    -moz-column-gap: clamp(2.5rem ,2.2058823529rem + 1.4705882353vw ,3.75rem);
+    column-gap: clamp(2.5rem ,2.2058823529rem + 1.4705882353vw ,3.75rem)
+  }
+  .talk__inputs {
+    row-gap: clamp(1.875rem ,1.7279411765rem + .7352941176vw ,2.5rem)
+  }
+  .follow__list {
+    padding-bottom: clamp(2.5rem ,1.3235294118rem + 5.8823529412vw ,7.5rem)
+  }
+}
+@media (min-width:60em)and (max-width:120em) {
+  .wrap-cnt--wide {
+    padding-left: clamp(1.875rem ,-3.75rem + 9.375vw ,7.5rem)
+  }
+  .wrap-cnt--wide {
+    padding-right: clamp(1.875rem ,-3.75rem + 9.375vw ,7.5rem)
+  }
+}
+@media (min-width:20em)and (max-width:60em) {
+  .wrap-cnt--wide {
+    padding-left: clamp(.9375rem ,.46875rem + 2.34375vw ,1.875rem)
+  }
+  .wrap-cnt--wide {
+    padding-right: clamp(.9375rem ,.46875rem + 2.34375vw ,1.875rem)
+  }
 }
 @media (min-width:47.99875em)and (max-width:105em) {
   .header__container {
@@ -2955,11 +3172,25 @@ button.swiper-pagination-bullet {
     top: .3125rem
   }
 }
+@media (max-width:48em)and (min-width:105em) {
+  .talk__form-wrapper {
+    gap: 3.75rem
+  }
+}
+@media (max-width:48em)and (min-width:20em)and (max-width:105em) {
+  .talk__form-wrapper {
+    gap: clamp(2.5rem ,2.2058823529rem + 1.4705882353vw ,3.75rem)
+  }
+}
 @media (any-hover:hover) {
   .button:hover {
     background-color: #009e67
   }
   .button--tr:hover {
+    background-color: #009e67
+  }
+  .button--trgreen:hover {
+    color: #fff;
     background-color: #009e67
   }
   .button--trdark:hover {
@@ -2973,6 +3204,12 @@ button.swiper-pagination-bullet {
   }
   [class*=_link]:hover {
     color: #009e67
+  }
+  .hero-main__slider .hero-main__swiper-pagination .swiper-pagination-bullet:hover {
+    opacity: .6
+  }
+  .feedback__slider .feedback__swiper-pagination .swiper-pagination-bullet:hover {
+    opacity: .6
   }
   .price-button-prev:hover {
     opacity: .6
@@ -3001,5 +3238,11 @@ button.swiper-pagination-bullet {
   }
   .projects__nav-next-right:hover {
     color: #009e67
+  }
+  .feedback__nav-prew:hover {
+    opacity: .6
+  }
+  .feedback__nav-next:hover {
+    opacity: .6
   }
 }
