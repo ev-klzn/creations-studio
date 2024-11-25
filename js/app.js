@@ -4494,11 +4494,15 @@
             observer: true,
             observeParents: true,
             slidesPerView: 1,
-            speed: 1500,
+            speed: 2e3,
             parallax: true,
             touchRatio: 0,
             loop: true,
             effect: "fade",
+            autoplay: {
+                delay: 5e3,
+                disableOnInteraction: false
+            },
             pagination: {
                 el: ".hero-main__swiper-pagination",
                 clickable: true
@@ -4513,7 +4517,7 @@
             slidesPerView: 1,
             spaceBetween: 30,
             autoHeight: true,
-            speed: 1500,
+            speed: 2e3,
             parallax: true,
             navigation: {
                 prevEl: ".projects__nav-prew",
@@ -4523,7 +4527,7 @@
         if (document.querySelector(".video-left-slider")) new swiper_core_Swiper(".video-left-slider", {
             modules: [ Navigation ],
             slidesPerView: 1.2,
-            speed: 1500,
+            speed: 2e3,
             navigation: {
                 prevEl: ".projects__nav-prew",
                 nextEl: ".projects__nav-next"
@@ -4553,7 +4557,7 @@
             slidesPerView: 1,
             spaceBetween: 30,
             autoHeight: true,
-            speed: 1500,
+            speed: 2e3,
             initialSlide: 1,
             parallax: true,
             navigation: {
@@ -4565,7 +4569,7 @@
             modules: [ Navigation ],
             initialSlide: 1,
             slidesPerView: 1.2,
-            speed: 1500,
+            speed: 2e3,
             navigation: {
                 prevEl: ".projects__nav-prew-right",
                 nextEl: ".projects__nav-next-right"
@@ -4589,10 +4593,14 @@
         });
         if (document.querySelector(".projects-all__slider")) new swiper_core_Swiper(".projects-all__slider", {
             modules: [ Autoplay ],
+            loop: true,
             reverseDirection: true,
             slidesPerView: 4.5,
-            speed: 1500,
-            loop: true,
+            speed: 2e3,
+            autoplay: {
+                delay: 5e3,
+                disableOnInteraction: false
+            },
             breakpoints: {
                 320: {
                     spaceBetween: 10,
@@ -4618,12 +4626,18 @@
             on: {}
         });
         if (document.querySelector(".feedback__slider-photo")) new swiper_core_Swiper(".feedback__slider-photo", {
-            modules: [ Navigation, Pagination ],
+            modules: [ Navigation, Pagination, Autoplay, EffectFade ],
             observer: true,
+            loop: true,
             observeParents: true,
             slidesPerView: 1,
             spaceBetween: 50,
-            speed: 1500,
+            speed: 2e3,
+            effect: "fade",
+            autoplay: {
+                delay: 5e3,
+                disableOnInteraction: false
+            },
             navigation: {
                 prevEl: ".feedback__nav-prew",
                 nextEl: ".feedback__nav-next"
@@ -4631,12 +4645,18 @@
             on: {}
         });
         if (document.querySelector(".feedback__slider")) new swiper_core_Swiper(".feedback__slider", {
-            modules: [ Navigation, Pagination ],
+            modules: [ Navigation, Pagination, Autoplay, Parallax ],
             observer: true,
             observeParents: true,
             slidesPerView: 1,
             spaceBetween: 200,
-            speed: 1500,
+            parallax: true,
+            speed: 2e3,
+            loop: true,
+            autoplay: {
+                delay: 5e3,
+                disableOnInteraction: false
+            },
             pagination: {
                 el: ".feedback__swiper-pagination",
                 clickable: true
@@ -4652,7 +4672,7 @@
             observer: true,
             observeParents: true,
             autoHeight: true,
-            speed: 1500,
+            speed: 2e3,
             navigation: {
                 prevEl: ".price-button-prev",
                 nextEl: ".price-button-next"
@@ -4698,7 +4718,7 @@
             observeParents: true,
             autoHeight: true,
             initialSlide: 2,
-            speed: 1500,
+            speed: 2e3,
             rtl: true,
             navigation: {
                 prevEl: ".price-button-next",
