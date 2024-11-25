@@ -4672,13 +4672,16 @@
                 },
                 768: {
                     enabled: true,
-                    slidesPerView: 2.1
+                    slidesPerView: 1.2
                 },
                 1024: {
-                    slidesPerView: 2.2
+                    slidesPerView: 1.3
                 },
                 1268: {
-                    slidesPerView: 2.3
+                    slidesPerView: 2.1
+                },
+                1340: {
+                    slidesPerView: 2.15
                 },
                 1440: {
                     slidesPerView: 2.3
@@ -4706,23 +4709,28 @@
                     slidesPerView: 3,
                     enabled: false,
                     direction: "vertical",
+                    initialSlide: 0,
                     autoHeight: false
                 },
                 640: {
                     slidesPerView: 3,
                     enabled: false,
                     direction: "vertical",
+                    initialSlide: 0,
                     autoHeight: false
                 },
                 768: {
                     enabled: true,
-                    slidesPerView: 2.1
+                    slidesPerView: 1.2
                 },
                 1024: {
-                    slidesPerView: 2.2
+                    slidesPerView: 1.3
                 },
                 1268: {
-                    slidesPerView: 2.3
+                    slidesPerView: 2.1
+                },
+                1340: {
+                    slidesPerView: 2.15
                 },
                 1440: {
                     slidesPerView: 2.3
