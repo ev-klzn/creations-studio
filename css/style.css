@@ -2800,6 +2800,22 @@ button.swiper-pagination-bullet {
     justify-content: center;
     align-items: center
   }
+  .price__slider .swiper-slide {
+    height: auto;
+    height: -webkit-max-content!important;
+    height: max-content!important
+  }
+  .price__slider .swiper-slide:not(:last-child) {
+    margin-bottom: 1.875rem
+  }
+  .price__slider-bottom .swiper-slide {
+    height: auto;
+    height: -webkit-max-content!important;
+    height: max-content!important
+  }
+  .price__slider-bottom .swiper-slide:not(:last-child) {
+    margin-bottom: 1.875rem
+  }
 }
 @media (max-width:47.99875em)and (any-hover:none) {
   .icon-menu {

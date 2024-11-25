@@ -4659,13 +4659,20 @@
             },
             breakpoints: {
                 320: {
-                    slidesPerView: 1.11
+                    slidesPerView: 3,
+                    direction: "vertical",
+                    autoHeight: false,
+                    enabled: false
                 },
                 640: {
-                    slidesPerView: 1.2
+                    slidesPerView: 3,
+                    enabled: false,
+                    direction: "vertical",
+                    autoHeight: false
                 },
                 768: {
-                    slidesPerView: 2.2
+                    enabled: true,
+                    slidesPerView: 2.1
                 },
                 1024: {
                     slidesPerView: 2.2
@@ -4696,13 +4703,20 @@
             },
             breakpoints: {
                 320: {
-                    slidesPerView: 1.11
+                    slidesPerView: 3,
+                    enabled: false,
+                    direction: "vertical",
+                    autoHeight: false
                 },
                 640: {
-                    slidesPerView: 1.2
+                    slidesPerView: 3,
+                    enabled: false,
+                    direction: "vertical",
+                    autoHeight: false
                 },
                 768: {
-                    slidesPerView: 2
+                    enabled: true,
+                    slidesPerView: 2.1
                 },
                 1024: {
                     slidesPerView: 2.2
