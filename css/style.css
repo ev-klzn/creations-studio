@@ -2658,6 +2658,9 @@ button.swiper-pagination-bullet {
   .hero__image__image--video {
     display: none
   }
+  .gallery__image {
+    aspect-ratio: 960/700
+  }
   .thinking__about {
     gap: 1.25rem;
     grid-template-columns: auto
@@ -2873,6 +2876,9 @@ button.swiper-pagination-bullet {
   }
   .mission__text {
     grid-template-columns: auto
+  }
+  .gallery__image {
+    aspect-ratio: 480/780
   }
   .projects__actions {
     flex-direction: column;
