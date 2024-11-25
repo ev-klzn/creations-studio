@@ -922,6 +922,10 @@ address {
   column-gap: 1.875rem;
   row-gap: 3.125rem
 }
+.offers-list {
+  display: grid;
+  gap: 2.5rem
+}
 .offer__img {
   margin-bottom: 2.5rem
 }
