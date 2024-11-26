@@ -4410,7 +4410,7 @@
             loop: true,
             effect: "fade",
             autoplay: {
-                delay: 7e3,
+                delay: 6e3,
                 disableOnInteraction: false
             },
             pagination: {
@@ -4506,7 +4506,7 @@
             slidesPerView: 4.5,
             speed: 2e3,
             autoplay: {
-                delay: 7e3,
+                delay: 6e3,
                 disableOnInteraction: false
             },
             breakpoints: {
@@ -4543,7 +4543,7 @@
             speed: 2e3,
             effect: "fade",
             autoplay: {
-                delay: 7e3,
+                delay: 6e3,
                 disableOnInteraction: false
             },
             navigation: {
@@ -4560,6 +4560,10 @@
             spaceBetween: 200,
             speed: 2e3,
             loop: true,
+            autoplay: {
+                delay: 6e3,
+                disableOnInteraction: false
+            },
             pagination: {
                 el: ".feedback__swiper-pagination",
                 clickable: true

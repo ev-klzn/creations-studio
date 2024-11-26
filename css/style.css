@@ -173,9 +173,9 @@ body {
   background: #016546;
   padding-top: 1.125rem;
   padding-bottom: 1rem;
-  transition: color 1s,background-color 1s,opacity 1s ease 1s,-webkit-transform 1s ease 1s;
-  transition: color 1s,background-color 1s,transform 1s ease 1s,opacity 1s ease 1s;
-  transition: color 1s,background-color 1s,transform 1s ease 1s,opacity 1s ease 1s,-webkit-transform 1s ease 1s;
+  transition: color .75s,background-color .75s,opacity .75s ease .75s,-webkit-transform .75s ease .75s;
+  transition: color .75s,background-color .75s,transform .75s ease .75s,opacity .75s ease .75s;
+  transition: color .75s,background-color .75s,transform .75s ease .75s,opacity .75s ease .75s,-webkit-transform .75s ease .75s;
   border: 1px solid transparent
 }
 .button._watcher-view {
@@ -437,9 +437,9 @@ body::after {
   opacity: 0;
   -webkit-transform: translate(0,10%);
   transform: translate(0,10%);
-  transition: opacity 1s,-webkit-transform 1s;
-  transition: transform 1s,opacity 1s;
-  transition: transform 1s,opacity 1s,-webkit-transform 1s
+  transition: opacity .75s,-webkit-transform .75s;
+  transition: transform .75s,opacity .75s;
+  transition: transform .75s,opacity .75s,-webkit-transform .75s
 }
 .title._watcher-view {
   transition-delay: .1s;
@@ -483,14 +483,14 @@ body::after {
   background-color: #002117
 }
 [class*=_link] {
-  transition: color 1s
+  transition: color .75s
 }
 .swiper-button-disabled {
   color: #cecece;
   opacity: .5;
   pointer-events: none;
   cursor: default;
-  transition: all 0s
+  transition: all .75s
 }
 .text {
   color: #002117;
@@ -506,9 +506,9 @@ body::after {
   opacity: 0;
   -webkit-transform: translate(0,10%);
   transform: translate(0,10%);
-  transition: opacity 1s,-webkit-transform 1s;
-  transition: opacity 1s,transform 1s;
-  transition: opacity 1s,transform 1s,-webkit-transform 1s
+  transition: opacity .75s,-webkit-transform .75s;
+  transition: opacity .75s,transform .75s;
+  transition: opacity .75s,transform .75s,-webkit-transform .75s
 }
 .text p._watcher-view {
   opacity: 1;
@@ -682,7 +682,7 @@ svg {
   opacity: 1;
   border: 2px solid transparent;
   background-color: #fafafa;
-  transition: all 1.5s
+  transition: all 2s
 }
 .hero-main__slider .hero-main__swiper-pagination .swiper-pagination-bullet-active {
   width: 8px;
@@ -698,13 +698,13 @@ svg {
 }
 .video-left-slider .swiper-slide-active,
 .video-left-slider-right .swiper-slide-active {
-  transition: all 1.5s
+  transition: all 2s
 }
 .video-left-slider .swiper-slide:not(.swiper-slide-active),
 .video-left-slider-right .swiper-slide:not(.swiper-slide-active) {
   -webkit-transform: scale(.9);
   transform: scale(.9);
-  transition: all 1.5s
+  transition: all 2s
 }
 .feedback__slider {
   position: relative
@@ -722,7 +722,7 @@ svg {
   opacity: 1;
   border: 2px solid transparent;
   background-color: #fafafa;
-  transition: all 1.5s
+  transition: all 2s
 }
 .feedback__slider .feedback__swiper-pagination .swiper-pagination-bullet-active {
   width: 8px;
@@ -759,7 +759,7 @@ address {
   left: -3.125rem;
   -webkit-transform: translate(0,-50%);
   transform: translate(0,-50%);
-  transition: all 1s
+  transition: all .75s
 }
 .price-button-prev::before {
   content: "";
@@ -776,7 +776,7 @@ address {
   transform: translate(0,-50%);
   right: -3.75rem;
   font-size: 3.125rem;
-  transition: all 1s
+  transition: all .75s
 }
 .price-button-next::before {
   content: "";
@@ -791,7 +791,7 @@ address {
   z-index: 50;
   background: rgba(3,0,11,0);
   color: #fff;
-  transition: background 1s,padding-top 1s,padding-bottom 1s;
+  transition: background .75s,padding-top .75s,padding-bottom .75s;
   padding-top: .9375rem;
   padding-bottom: .9375rem
 }
@@ -844,7 +844,7 @@ address {
 .menu__link {
   font-size: 1.0625rem;
   line-height: 1.4;
-  transition: 1s all;
+  transition: .75s all;
   position: relative
 }
 .menu__link::before {
@@ -856,7 +856,7 @@ address {
   width: 0;
   left: 0;
   border-radius: .125rem;
-  transition: all 1s;
+  transition: all .75s;
   margin-top: .5rem
 }
 .icon-menu {
@@ -881,7 +881,7 @@ address {
   color: #002117
 }
 .footer__tel {
-  transition: all 1s
+  transition: all .75s
 }
 .footer__socials {
   font-size: 2.25rem;
@@ -891,7 +891,7 @@ address {
   flex-wrap: wrap
 }
 .footer__social-link {
-  transition: all 1s
+  transition: all .75s
 }
 .hero {
   min-height: 100vh;
@@ -950,9 +950,9 @@ address {
   opacity: 0;
   -webkit-transform: translate(0,10%);
   transform: translate(0,10%);
-  transition: opacity 1s,-webkit-transform 1s;
-  transition: transform 1s,opacity 1s;
-  transition: transform 1s,opacity 1s,-webkit-transform 1s;
+  transition: opacity .75s,-webkit-transform .75s;
+  transition: transform .75s,opacity .75s;
+  transition: transform .75s,opacity .75s,-webkit-transform .75s;
   display: flex;
   flex-direction: column
 }
@@ -966,9 +966,9 @@ address {
   opacity: 0;
   -webkit-transform: translate(0,-10%);
   transform: translate(0,-10%);
-  transition: opacity 1s,-webkit-transform 1s;
-  transition: transform 1s,opacity 1s;
-  transition: transform 1s,opacity 1s,-webkit-transform 1s;
+  transition: opacity .75s,-webkit-transform .75s;
+  transition: transform .75s,opacity .75s;
+  transition: transform .75s,opacity .75s,-webkit-transform .75s;
   flex-direction: column-reverse
 }
 .member-team--reverse._watcher-view {
@@ -1045,9 +1045,9 @@ address {
   opacity: 0;
   -webkit-transform: translate(0,10%);
   transform: translate(0,10%);
-  transition: opacity 1s,-webkit-transform 1s;
-  transition: transform 1s,opacity 1s;
-  transition: transform 1s,opacity 1s,-webkit-transform 1s;
+  transition: opacity .75s,-webkit-transform .75s;
+  transition: transform .75s,opacity .75s;
+  transition: transform .75s,opacity .75s,-webkit-transform .75s;
   font-size: 2rem
 }
 .offer__title._watcher-view {
@@ -1068,9 +1068,9 @@ address {
   opacity: 0;
   -webkit-transform: translate(0,10%);
   transform: translate(0,10%);
-  transition: opacity 1s,-webkit-transform 1s;
-  transition: opacity 1s,transform 1s;
-  transition: opacity 1s,transform 1s,-webkit-transform 1s
+  transition: opacity .75s,-webkit-transform .75s;
+  transition: opacity .75s,transform .75s;
+  transition: opacity .75s,transform .75s,-webkit-transform .75s
 }
 .offer__list li._watcher-view {
   transition-delay: .7s;
@@ -1126,7 +1126,7 @@ video {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: opacity 1s
+  transition: opacity .75s
 }
 .play-button img,
 .play-button-right img {
@@ -1159,16 +1159,16 @@ video {
   opacity: 0;
   -webkit-transform: translate(0,10%);
   transform: translate(0,10%);
-  transition: opacity 1s,-webkit-transform 1s;
-  transition: transform 1s,opacity 1s;
-  transition: transform 1s,opacity 1s,-webkit-transform 1s;
+  transition: opacity .75s,-webkit-transform .75s;
+  transition: transform .75s,opacity .75s;
+  transition: transform .75s,opacity .75s,-webkit-transform .75s;
   color: #cecece;
   font-size: 1.0625rem;
   font-weight: 300;
   letter-spacing: .17px
 }
 .projects__date._watcher-view {
-  transition-delay: 0s;
+  transition-delay: .1s;
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
   opacity: 1
@@ -1177,9 +1177,9 @@ video {
   opacity: 0;
   -webkit-transform: translate(0,10%);
   transform: translate(0,10%);
-  transition: opacity 1s,-webkit-transform 1s;
-  transition: transform 1s,opacity 1s;
-  transition: transform 1s,opacity 1s,-webkit-transform 1s;
+  transition: opacity .75s,-webkit-transform .75s;
+  transition: transform .75s,opacity .75s;
+  transition: transform .75s,opacity .75s,-webkit-transform .75s;
   color: #016546
 }
 .projects__title._watcher-view {
@@ -1206,16 +1206,16 @@ video {
   line-height: 1
 }
 .projects__nav-prew {
-  transition: color 1s
+  transition: color .75s
 }
 .projects__nav-prew-right {
-  transition: color 1s
+  transition: color .75s
 }
 .projects__nav-next {
-  transition: color 1s
+  transition: color .75s
 }
 .projects__nav-next-right {
-  transition: color 1s
+  transition: color .75s
 }
 .projects__vd {
   aspect-ratio: 950/700
@@ -1313,9 +1313,9 @@ video {
   opacity: 0;
   -webkit-transform: translate(0,10%);
   transform: translate(0,10%);
-  transition: opacity 1s,-webkit-transform 1s;
-  transition: transform 1s,opacity 1s;
-  transition: transform 1s,opacity 1s,-webkit-transform 1s;
+  transition: opacity .75s,-webkit-transform .75s;
+  transition: transform .75s,opacity .75s;
+  transition: transform .75s,opacity .75s,-webkit-transform .75s;
   color: #d1deda
 }
 .feedback__person._watcher-view {
@@ -1341,7 +1341,7 @@ video {
   gap: .3125rem
 }
 .feedback__nav-prew {
-  transition: all 1s
+  transition: all .75s
 }
 .feedback__nav-prew::after,
 .feedback__nav-prew::before {
@@ -1349,7 +1349,7 @@ video {
   color: #d1deda
 }
 .feedback__nav-next {
-  transition: all 1s
+  transition: all .75s
 }
 .feedback__nav-next::after,
 .feedback__nav-next::before {
@@ -1394,9 +1394,9 @@ video {
   opacity: 0;
   -webkit-transform: translate(0,10%);
   transform: translate(0,10%);
-  transition: opacity 1s,-webkit-transform 1s;
-  transition: transform 1s,opacity 1s;
-  transition: transform 1s,opacity 1s,-webkit-transform 1s;
+  transition: opacity .75s,-webkit-transform .75s;
+  transition: transform .75s,opacity .75s;
+  transition: transform .75s,opacity .75s,-webkit-transform .75s;
   color: #fff;
   margin-bottom: 1.25rem;
   padding: 0 .9375rem
@@ -1486,9 +1486,9 @@ video {
   opacity: 0;
   -webkit-transform: translate(0,10%);
   transform: translate(0,10%);
-  transition: opacity 1s,-webkit-transform 1s;
-  transition: transform 1s,opacity 1s;
-  transition: transform 1s,opacity 1s,-webkit-transform 1s;
+  transition: opacity .75s,-webkit-transform .75s;
+  transition: transform .75s,opacity .75s;
+  transition: transform .75s,opacity .75s,-webkit-transform .75s;
   position: relative;
   flex: 1 1 24.375rem
 }
@@ -1499,7 +1499,7 @@ video {
   opacity: 1
 }
 .follow__item::before {
-  transition: all 1s;
+  transition: all .75s;
   position: absolute;
   content: "";
   width: 100%;
@@ -1515,7 +1515,7 @@ video {
 }
 .follow__body {
   text-transform: uppercase;
-  transition: all 1s;
+  transition: all .75s;
   opacity: 0;
   text-align: center;
   position: absolute;
@@ -2962,7 +2962,7 @@ button.swiper-pagination-bullet {
     top: 0;
     overflow: auto;
     padding: 3.125rem .9375rem .9375rem 1.875rem;
-    transition: left 1s
+    transition: left .75s
   }
   .menu__body::before {
     content: "";
@@ -2971,7 +2971,7 @@ button.swiper-pagination-bullet {
     height: 4.375rem;
     left: -100%;
     top: 0;
-    transition: left 1s;
+    transition: left .75s;
     z-index: 2
   }
   .menu-open .menu__body {
@@ -2991,7 +2991,7 @@ button.swiper-pagination-bullet {
   .icon-menu::after,
   .icon-menu::before {
     content: "";
-    transition: all 1s ease 0s;
+    transition: all .75s ease 0s;
     right: 0;
     position: absolute;
     width: 100%;
@@ -3042,7 +3042,7 @@ button.swiper-pagination-bullet {
     background: #002117;
     display: grid;
     grid-template-rows: 1fr auto;
-    transition: left 1s
+    transition: left .75s
   }
   .menu__body::before {
     content: "";
@@ -3052,7 +3052,7 @@ button.swiper-pagination-bullet {
     height: 4.375rem;
     left: -100%;
     top: 0;
-    transition: left 1s;
+    transition: left .75s;
     z-index: 55
   }
   .menu__body::after {
@@ -3098,7 +3098,7 @@ button.swiper-pagination-bullet {
   .icon-menu::after,
   .icon-menu::before {
     content: "";
-    transition: all 1s ease 0s;
+    transition: all .75s ease 0s;
     right: 0;
     position: absolute;
     width: 100%;
