@@ -4014,95 +4014,6 @@
             destroy
         });
     }
-    function Parallax(_ref) {
-        let {swiper, extendParams, on} = _ref;
-        extendParams({
-            parallax: {
-                enabled: false
-            }
-        });
-        const elementsSelector = "[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y], [data-swiper-parallax-opacity], [data-swiper-parallax-scale]";
-        const setTransform = (el, progress) => {
-            const {rtl} = swiper;
-            const rtlFactor = rtl ? -1 : 1;
-            const p = el.getAttribute("data-swiper-parallax") || "0";
-            let x = el.getAttribute("data-swiper-parallax-x");
-            let y = el.getAttribute("data-swiper-parallax-y");
-            const scale = el.getAttribute("data-swiper-parallax-scale");
-            const opacity = el.getAttribute("data-swiper-parallax-opacity");
-            const rotate = el.getAttribute("data-swiper-parallax-rotate");
-            if (x || y) {
-                x = x || "0";
-                y = y || "0";
-            } else if (swiper.isHorizontal()) {
-                x = p;
-                y = "0";
-            } else {
-                y = p;
-                x = "0";
-            }
-            if (x.indexOf("%") >= 0) x = `${parseInt(x, 10) * progress * rtlFactor}%`; else x = `${x * progress * rtlFactor}px`;
-            if (y.indexOf("%") >= 0) y = `${parseInt(y, 10) * progress}%`; else y = `${y * progress}px`;
-            if (typeof opacity !== "undefined" && opacity !== null) {
-                const currentOpacity = opacity - (opacity - 1) * (1 - Math.abs(progress));
-                el.style.opacity = currentOpacity;
-            }
-            let transform = `translate3d(${x}, ${y}, 0px)`;
-            if (typeof scale !== "undefined" && scale !== null) {
-                const currentScale = scale - (scale - 1) * (1 - Math.abs(progress));
-                transform += ` scale(${currentScale})`;
-            }
-            if (rotate && typeof rotate !== "undefined" && rotate !== null) {
-                const currentRotate = rotate * progress * -1;
-                transform += ` rotate(${currentRotate}deg)`;
-            }
-            el.style.transform = transform;
-        };
-        const setTranslate = () => {
-            const {el, slides, progress, snapGrid, isElement} = swiper;
-            const elements = utils_elementChildren(el, elementsSelector);
-            if (swiper.isElement) elements.push(...utils_elementChildren(swiper.hostEl, elementsSelector));
-            elements.forEach((subEl => {
-                setTransform(subEl, progress);
-            }));
-            slides.forEach(((slideEl, slideIndex) => {
-                let slideProgress = slideEl.progress;
-                if (swiper.params.slidesPerGroup > 1 && swiper.params.slidesPerView !== "auto") slideProgress += Math.ceil(slideIndex / 2) - progress * (snapGrid.length - 1);
-                slideProgress = Math.min(Math.max(slideProgress, -1), 1);
-                slideEl.querySelectorAll(`${elementsSelector}, [data-swiper-parallax-rotate]`).forEach((subEl => {
-                    setTransform(subEl, slideProgress);
-                }));
-            }));
-        };
-        const setTransition = function(duration) {
-            if (duration === void 0) duration = swiper.params.speed;
-            const {el, hostEl} = swiper;
-            const elements = [ ...el.querySelectorAll(elementsSelector) ];
-            if (swiper.isElement) elements.push(...hostEl.querySelectorAll(elementsSelector));
-            elements.forEach((parallaxEl => {
-                let parallaxDuration = parseInt(parallaxEl.getAttribute("data-swiper-parallax-duration"), 10) || duration;
-                if (duration === 0) parallaxDuration = 0;
-                parallaxEl.style.transitionDuration = `${parallaxDuration}ms`;
-            }));
-        };
-        on("beforeInit", (() => {
-            if (!swiper.params.parallax.enabled) return;
-            swiper.params.watchSlidesProgress = true;
-            swiper.originalParams.watchSlidesProgress = true;
-        }));
-        on("init", (() => {
-            if (!swiper.params.parallax.enabled) return;
-            setTranslate();
-        }));
-        on("setTranslate", (() => {
-            if (!swiper.params.parallax.enabled) return;
-            setTranslate();
-        }));
-        on("setTransition", ((_swiper, duration) => {
-            if (!swiper.params.parallax.enabled) return;
-            setTransition(duration);
-        }));
-    }
     function Autoplay(_ref) {
         let {swiper, extendParams, on, emit, params} = _ref;
         swiper.autoplay = {
@@ -4495,12 +4406,11 @@
             observeParents: true,
             slidesPerView: 1,
             speed: 2e3,
-            parallax: true,
             touchRatio: 0,
             loop: true,
             effect: "fade",
             autoplay: {
-                delay: 5e3,
+                delay: 7e3,
                 disableOnInteraction: false
             },
             pagination: {
@@ -4510,7 +4420,7 @@
             on: {}
         });
         if (document.querySelector(".projects__slider")) new swiper_core_Swiper(".projects__slider", {
-            modules: [ Navigation, Parallax ],
+            modules: [ Navigation ],
             observer: true,
             observeParents: true,
             observeSlideChildren: true,
@@ -4518,7 +4428,6 @@
             spaceBetween: 30,
             autoHeight: true,
             speed: 2e3,
-            parallax: true,
             navigation: {
                 prevEl: ".projects__nav-prew",
                 nextEl: ".projects__nav-next"
@@ -4550,7 +4459,7 @@
             on: {}
         });
         if (document.querySelector(".projects__slider-right")) new swiper_core_Swiper(".projects__slider-right", {
-            modules: [ Navigation, Parallax ],
+            modules: [ Navigation ],
             observer: true,
             observeParents: true,
             observeSlideChildren: true,
@@ -4559,7 +4468,6 @@
             autoHeight: true,
             speed: 2e3,
             initialSlide: 1,
-            parallax: true,
             navigation: {
                 prevEl: ".projects__nav-prew-right",
                 nextEl: ".projects__nav-next-right"
@@ -4598,7 +4506,7 @@
             slidesPerView: 4.5,
             speed: 2e3,
             autoplay: {
-                delay: 5e3,
+                delay: 7e3,
                 disableOnInteraction: false
             },
             breakpoints: {
@@ -4635,7 +4543,7 @@
             speed: 2e3,
             effect: "fade",
             autoplay: {
-                delay: 5e3,
+                delay: 7e3,
                 disableOnInteraction: false
             },
             navigation: {
@@ -4645,18 +4553,13 @@
             on: {}
         });
         if (document.querySelector(".feedback__slider")) new swiper_core_Swiper(".feedback__slider", {
-            modules: [ Navigation, Pagination, Autoplay, Parallax ],
+            modules: [ Navigation, Pagination, Autoplay ],
             observer: true,
             observeParents: true,
             slidesPerView: 1,
             spaceBetween: 200,
-            parallax: true,
             speed: 2e3,
             loop: true,
-            autoplay: {
-                delay: 5e3,
-                disableOnInteraction: false
-            },
             pagination: {
                 el: ".feedback__swiper-pagination",
                 clickable: true
