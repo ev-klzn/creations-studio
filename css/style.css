@@ -1196,6 +1196,9 @@ video {
   padding-left: .9375rem;
   padding-right: .9375rem
 }
+.projects-all {
+  margin-left: 1.875rem
+}
 .project__text {
   display: grid;
   gap: .9375rem;
@@ -1516,6 +1519,33 @@ video {
 }
 .follow__item:hover .follow__body {
   opacity: 1
+}
+.hero-video__video {
+  height: 100vh;
+  aspect-ratio: 1920/1080
+}
+.block-title--dark {
+  color: #fff
+}
+.mission-about__body {
+  display: grid;
+  grid-template-columns: 52% 48%
+}
+.mission-about__body--reverse {
+  margin-top: -4%;
+  grid-template-columns: 48% 52%
+}
+.mission-about__body--reverse .mission-about__img {
+  order: 2
+}
+.mission-about__body--reverse .mission-about__text {
+  order: 1
+}
+.mission-about__image {
+  aspect-ratio: 1000/660
+}
+.mission-about__text {
+  align-items: center
 }
 @font-face {
   font-family: swiper-icons;
@@ -2249,9 +2279,6 @@ button.swiper-pagination-bullet {
   .button {
     padding-right: 3.75rem
   }
-  .title {
-    font-size: 4.25rem
-  }
   .wrap-cnt {
     padding-left: 3.875rem
   }
@@ -2350,25 +2377,16 @@ button.swiper-pagination-bullet {
     margin-bottom: 7.5rem
   }
   .hero__title {
-    padding-left: 8.4375rem
-  }
-  .hero__title {
     padding-right: 1.875rem
   }
   .hero__title {
     margin-bottom: 2.5rem
   }
   .hero__text {
-    padding-left: 8.4375rem
-  }
-  .hero__text {
     padding-right: 1.875rem
   }
   .hero__text {
     margin-bottom: 2.5rem
-  }
-  .hero__actions {
-    padding-left: 8.4375rem
   }
   .hero__actions {
     padding-right: 1.875rem
@@ -2502,35 +2520,68 @@ button.swiper-pagination-bullet {
   }
 }
 @media (min-width:120em) {
-  .wrap-cnt--wide {
-    padding-left: 7.5rem
+  .title {
+    font-size: 4.25rem
   }
   .wrap-cnt--wide {
-    padding-right: 7.5rem
+    padding-left: 8.4375rem
+  }
+  .wrap-cnt--wide {
+    padding-right: 8.4375rem
+  }
+  .page__hero-video {
+    margin-bottom: 7.5rem
+  }
+  .hero__cnt {
+    padding-left: 8.4375rem
   }
   .projects__list--right .projects__body .projects__about {
-    padding-right: 7.5rem
+    padding-right: 8.4375rem
   }
   .projects__about {
-    padding-left: 7.5rem
+    padding-left: 8.4375rem
   }
   .thinking__body {
-    padding-left: 7.5rem
+    padding-left: 8.4375rem
   }
   .feedback__wrapper {
-    padding-left: 7.5rem
+    padding-right: 8.4375rem
   }
   .feedback__wrapper {
-    padding-right: 7.5rem
+    padding-left: 8.4375rem
   }
   .price__list>*:nth-child(odd) {
     margin-bottom: 5.625rem
   }
   .talk__wrapper {
-    padding-left: 7.5rem
+    padding-right: 8.4375rem
   }
   .talk__wrapper {
-    padding-right: 7.5rem
+    padding-left: 8.4375rem
+  }
+  .block-title {
+    padding-top: 7.5rem
+  }
+  .block-title {
+    padding-bottom: 7.5rem
+  }
+  .block-title {
+    margin-bottom: 7.5rem
+  }
+  .mission-about {
+    padding-bottom: 7.5rem
+  }
+  .mission-about__text {
+    padding-left: 8.4375rem
+  }
+  .mission-about__text {
+    padding-right: 8.4375rem
+  }
+  .mission-about__text {
+    padding-top: 3.75rem
+  }
+  .mission-about__text {
+    padding-bottom: 3.75rem
   }
 }
 @media (max-width:120em) {
@@ -2559,7 +2610,23 @@ button.swiper-pagination-bullet {
     left: 0
   }
 }
-@media (max-width:75em)and (max-width:20em) {
+@media (max-width:75em)and (max-width:60em) {
+  .projects__list--right .projects__body .projects__about {
+    padding-left: 1.875rem
+  }
+  .projects__about {
+    padding-right: 1.875rem
+  }
+}
+@media (max-width:75em)and (max-width:30em)and (max-width:22.5em) {
+  .projects__list--right .projects__body .projects__about {
+    padding-left: 1.25rem
+  }
+  .projects__about {
+    padding-right: 1.25rem
+  }
+}
+@media (max-width:75em)and (max-width:22.5em)and (max-width:20em) {
   .projects__list--right .projects__body .projects__about {
     padding-left: .9375rem
   }
@@ -2568,9 +2635,98 @@ button.swiper-pagination-bullet {
   }
 }
 @media (max-width:60em) {
+  .title {
+    font-size: 3.5rem
+  }
+  .wrap-cnt--wide {
+    padding-left: 1.875rem
+  }
+  .wrap-cnt--wide {
+    padding-right: 1.875rem
+  }
+  .page__hero-video {
+    margin-bottom: 5rem
+  }
+  .hero__cnt {
+    padding-left: 1.875rem
+  }
+  .projects__list--right .projects__body .projects__about {
+    padding-right: 1.875rem
+  }
+  .projects__about {
+    padding-left: 1.875rem
+  }
+  .thinking__body {
+    padding-left: 1.875rem
+  }
+  .feedback__wrapper {
+    padding-right: 1.875rem
+  }
+  .feedback__wrapper {
+    padding-left: 1.875rem
+  }
+  .talk__wrapper {
+    padding-right: 1.875rem
+  }
+  .talk__wrapper {
+    padding-left: 1.875rem
+  }
   .talk__inputs {
     grid-template-columns: auto;
     gap: 2.5rem
+  }
+  .block-title {
+    padding-top: 5rem
+  }
+  .block-title {
+    padding-bottom: 5rem
+  }
+  .block-title {
+    margin-bottom: 5rem
+  }
+  .mission-about {
+    padding-bottom: 5rem
+  }
+  .mission-about__body {
+    grid-template-columns: 56% 44%
+  }
+  .mission-about__body--reverse {
+    margin-top: -8%;
+    grid-template-columns: 44% 56%
+  }
+  .mission-about__text {
+    padding-left: 1.875rem
+  }
+  .mission-about__text {
+    padding-right: 1.875rem
+  }
+  .mission-about__text {
+    padding-top: 2.5rem
+  }
+  .mission-about__text {
+    padding-bottom: 2.5rem
+  }
+}
+@media (max-width:60em)and (max-width:48em) {
+  .title {
+    font-size: 3rem
+  }
+  .mission-about__body {
+    font-size: 1.125rem
+  }
+}
+@media (max-width:48em)and (max-width:30em) {
+  .title {
+    font-size: 2.625rem
+  }
+  .page__hero-video {
+    margin-bottom: 3.75rem
+  }
+  .block-title {
+    margin-bottom: 2.5rem
+  }
+  .mission-about {
+    padding-bottom: 3.75rem
   }
 }
 @media (max-width:48em) {
@@ -2586,10 +2742,67 @@ button.swiper-pagination-bullet {
     max-width: 35rem;
     margin: 0 auto
   }
+  .block-title {
+    padding-right: .9375rem;
+    padding-left: .9375rem
+  }
+  .mission-about__body {
+    grid-template-columns: 60% 40%
+  }
+  .mission-about__body--reverse {
+    grid-template-columns: 40% 60%
+  }
 }
 @media (max-width:48em)and (max-width:20em) {
   .talk__form-wrapper {
     gap: 2.5rem
+  }
+}
+@media (max-width:30em)and (max-width:22.5em) {
+  .title {
+    font-size: 2.25rem
+  }
+  .wrap-cnt--wide {
+    padding-left: 1.25rem
+  }
+  .wrap-cnt--wide {
+    padding-right: 1.25rem
+  }
+  .hero__cnt {
+    padding-left: 1.25rem
+  }
+  .projects__list--right .projects__body .projects__about {
+    padding-right: 1.25rem
+  }
+  .projects__about {
+    padding-left: 1.25rem
+  }
+  .projects-all {
+    margin-left: 1.25rem
+  }
+  .thinking__body {
+    padding-left: 1.25rem
+  }
+  .feedback__wrapper {
+    padding-right: 1.25rem
+  }
+  .feedback__wrapper {
+    padding-left: 1.25rem
+  }
+  .talk__wrapper {
+    padding-right: 1.25rem
+  }
+  .talk__wrapper {
+    padding-left: 1.25rem
+  }
+  .mission-about__body {
+    font-size: 1rem
+  }
+  .mission-about__text {
+    padding-left: 1.25rem
+  }
+  .mission-about__text {
+    padding-right: 1.25rem
   }
 }
 @media (max-width:20em) {
@@ -2599,26 +2812,17 @@ button.swiper-pagination-bullet {
   .button {
     padding-right: .3125rem
   }
-  .title {
-    font-size: 1.75rem
-  }
   .wrap-cnt {
     padding-left: .9375rem
   }
   .wrap-cnt {
     padding-right: .9375rem
   }
-  .wrap-cnt--wide {
-    padding-left: .9375rem
-  }
-  .wrap-cnt--wide {
-    padding-right: .9375rem
+  .block-header {
+    padding-bottom: 3.75rem
   }
   .block-header {
-    padding-bottom: 3.125rem
-  }
-  .block-header {
-    padding-top: 3.125rem
+    padding-top: 3.75rem
   }
   .block-header::before {
     top: 3.125rem
@@ -2633,7 +2837,7 @@ button.swiper-pagination-bullet {
     padding-bottom: 1.875rem
   }
   .block-header__title {
-    font-size: 1.875rem
+    font-size: 2rem
   }
   .block-header--right .block-header__title {
     font-size: 1.875rem
@@ -2696,25 +2900,16 @@ button.swiper-pagination-bullet {
     margin-bottom: 2.5rem
   }
   .hero__title {
-    padding-left: .9375rem
-  }
-  .hero__title {
     padding-right: .9375rem
   }
   .hero__title {
     margin-bottom: 1.875rem
   }
   .hero__text {
-    padding-left: .9375rem
-  }
-  .hero__text {
     padding-right: .9375rem
   }
   .hero__text {
     margin-bottom: 1.875rem
-  }
-  .hero__actions {
-    padding-left: .9375rem
   }
   .hero__actions {
     padding-right: .9375rem
@@ -2742,12 +2937,6 @@ button.swiper-pagination-bullet {
   .offer__item {
     gap: .3125rem
   }
-  .projects__list--right .projects__body .projects__about {
-    padding-right: .9375rem
-  }
-  .projects__about {
-    padding-left: .9375rem
-  }
   .projects__title {
     font-size: 1.5rem
   }
@@ -2772,16 +2961,7 @@ button.swiper-pagination-bullet {
   .project__text {
     margin-bottom: 1.875rem
   }
-  .thinking__body {
-    padding-left: .9375rem
-  }
   .feedback__cnt {
-    padding-right: .9375rem
-  }
-  .feedback__wrapper {
-    padding-left: .9375rem
-  }
-  .feedback__wrapper {
     padding-right: .9375rem
   }
   .feedback__text {
@@ -2835,12 +3015,6 @@ button.swiper-pagination-bullet {
   .price__area {
     font-size: .9375rem
   }
-  .talk__wrapper {
-    padding-left: .9375rem
-  }
-  .talk__wrapper {
-    padding-right: .9375rem
-  }
   .talk__text {
     margin-bottom: 2.5rem
   }
@@ -2875,7 +3049,9 @@ button.swiper-pagination-bullet {
     flex: 1 0 26.25rem
   }
   .follow__item {
-    flex: 1 0 24.375rem
+    flex: 1 0 24.375rem;
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0)
   }
   .follow__body {
     opacity: 1;
@@ -2930,6 +3106,11 @@ button.swiper-pagination-bullet {
     display: block;
     text-align: center;
     width: 100%
+  }
+}
+@media (max-width:59.9375em) {
+  .mission-about__body--reverse {
+    margin-top: 0
   }
 }
 @media (max-width:47.99875em) {
@@ -3162,6 +3343,16 @@ button.swiper-pagination-bullet {
   .price__slider-bottom .swiper-slide:not(:last-child) {
     margin-bottom: 1.875rem
   }
+  .mission-about__body {
+    grid-template-columns: auto;
+    order: 1
+  }
+  .mission-about__body--reverse {
+    grid-template-columns: auto
+  }
+  .mission-about__img {
+    order: 2
+  }
 }
 @media (max-width:47.99875em)and (any-hover:none) {
   .icon-menu {
@@ -3169,6 +3360,13 @@ button.swiper-pagination-bullet {
   }
   .icon-menu {
     cursor: default
+  }
+}
+@media (max-width:34.375em) {
+  .block-header__title {
+    padding-left: .9375rem;
+    padding-right: .9375rem;
+    text-align: center
   }
 }
 @media (max-width:29.99875em) {
@@ -3199,6 +3397,56 @@ button.swiper-pagination-bullet {
     flex: 1 0 15.625rem
   }
 }
+@media (max-width:22.5em)and (max-width:20em) {
+  .title {
+    font-size: 1.75rem
+  }
+  .wrap-cnt--wide {
+    padding-left: .9375rem
+  }
+  .wrap-cnt--wide {
+    padding-right: .9375rem
+  }
+  .hero__cnt {
+    padding-left: .9375rem
+  }
+  .projects__list--right .projects__body .projects__about {
+    padding-right: .9375rem
+  }
+  .projects__about {
+    padding-left: .9375rem
+  }
+  .projects-all {
+    margin-left: .9375rem
+  }
+  .thinking__body {
+    padding-left: .9375rem
+  }
+  .feedback__wrapper {
+    padding-right: .9375rem
+  }
+  .feedback__wrapper {
+    padding-left: .9375rem
+  }
+  .talk__wrapper {
+    padding-right: .9375rem
+  }
+  .talk__wrapper {
+    padding-left: .9375rem
+  }
+  .block-title {
+    margin-bottom: 2rem
+  }
+  .mission-about {
+    padding-bottom: 2.5rem
+  }
+  .mission-about__text {
+    padding-left: .9375rem
+  }
+  .mission-about__text {
+    padding-right: .9375rem
+  }
+}
 @media (max-width:22.49875em) {
   .offer {
     flex: 1 1 15.625rem
@@ -3211,9 +3459,6 @@ button.swiper-pagination-bullet {
   .button {
     padding-right: clamp(.3125rem ,-.4963235294rem + 4.0441176471vw ,3.75rem)
   }
-  .title {
-    font-size: clamp(1.75rem ,1.1617647059rem + 2.9411764706vw ,4.25rem)
-  }
   .wrap-cnt {
     padding-left: clamp(.9375rem ,.2463235294rem + 3.4558823529vw ,3.875rem)
   }
@@ -3221,10 +3466,10 @@ button.swiper-pagination-bullet {
     padding-right: clamp(.9375rem ,.2463235294rem + 3.4558823529vw ,3.875rem)
   }
   .block-header {
-    padding-bottom: clamp(3.125rem ,2.0955882353rem + 5.1470588235vw ,7.5rem)
+    padding-bottom: clamp(3.75rem ,2.8676470588rem + 4.4117647059vw ,7.5rem)
   }
   .block-header {
-    padding-top: clamp(3.125rem ,2.0955882353rem + 5.1470588235vw ,7.5rem)
+    padding-top: clamp(3.75rem ,2.8676470588rem + 4.4117647059vw ,7.5rem)
   }
   .block-header::before {
     top: clamp(3.125rem ,2.0955882353rem + 5.1470588235vw ,7.5rem)
@@ -3239,7 +3484,7 @@ button.swiper-pagination-bullet {
     padding-bottom: clamp(1.875rem ,1.6544117647rem + 1.1029411765vw ,2.8125rem)
   }
   .block-header__title {
-    font-size: clamp(1.875rem ,1.6102941176rem + 1.3235294118vw ,3rem)
+    font-size: clamp(2rem ,1.7647058824rem + 1.1764705882vw ,3rem)
   }
   .block-header--right .block-header__title {
     font-size: clamp(1.875rem ,1.6102941176rem + 1.3235294118vw ,3rem)
@@ -3302,25 +3547,16 @@ button.swiper-pagination-bullet {
     margin-bottom: clamp(2.5rem ,1.3235294118rem + 5.8823529412vw ,7.5rem)
   }
   .hero__title {
-    padding-left: clamp(.9375rem ,-.8272058824rem + 8.8235294118vw ,8.4375rem)
-  }
-  .hero__title {
     padding-right: clamp(.9375rem ,.7169117647rem + 1.1029411765vw ,1.875rem)
   }
   .hero__title {
     margin-bottom: clamp(1.875rem ,1.7279411765rem + .7352941176vw ,2.5rem)
   }
   .hero__text {
-    padding-left: clamp(.9375rem ,-.8272058824rem + 8.8235294118vw ,8.4375rem)
-  }
-  .hero__text {
     padding-right: clamp(.9375rem ,.7169117647rem + 1.1029411765vw ,1.875rem)
   }
   .hero__text {
     margin-bottom: clamp(1.875rem ,1.7279411765rem + .7352941176vw ,2.5rem)
-  }
-  .hero__actions {
-    padding-left: clamp(.9375rem ,-.8272058824rem + 8.8235294118vw ,8.4375rem)
   }
   .hero__actions {
     padding-right: clamp(.9375rem ,.7169117647rem + 1.1029411765vw ,1.875rem)
@@ -3442,61 +3678,303 @@ button.swiper-pagination-bullet {
   }
 }
 @media (min-width:60em)and (max-width:120em) {
-  .wrap-cnt--wide {
-    padding-left: clamp(1.875rem ,-3.75rem + 9.375vw ,7.5rem)
+  .title {
+    font-size: clamp(3.5rem ,2.75rem + 1.25vw ,4.25rem)
   }
   .wrap-cnt--wide {
-    padding-right: clamp(1.875rem ,-3.75rem + 9.375vw ,7.5rem)
+    padding-left: clamp(1.875rem ,-4.6875rem + 10.9375vw ,8.4375rem)
+  }
+  .wrap-cnt--wide {
+    padding-right: clamp(1.875rem ,-4.6875rem + 10.9375vw ,8.4375rem)
+  }
+  .page__hero-video {
+    margin-bottom: clamp(5rem ,2.5rem + 4.1666666667vw ,7.5rem)
+  }
+  .hero__cnt {
+    padding-left: clamp(1.875rem ,-4.6875rem + 10.9375vw ,8.4375rem)
   }
   .projects__list--right .projects__body .projects__about {
-    padding-right: clamp(1.875rem ,-3.75rem + 9.375vw ,7.5rem)
+    padding-right: clamp(1.875rem ,-4.6875rem + 10.9375vw ,8.4375rem)
   }
   .projects__about {
-    padding-left: clamp(1.875rem ,-3.75rem + 9.375vw ,7.5rem)
+    padding-left: clamp(1.875rem ,-4.6875rem + 10.9375vw ,8.4375rem)
   }
   .thinking__body {
-    padding-left: clamp(1.875rem ,-3.75rem + 9.375vw ,7.5rem)
+    padding-left: clamp(1.875rem ,-4.6875rem + 10.9375vw ,8.4375rem)
   }
   .feedback__wrapper {
-    padding-left: clamp(1.875rem ,-3.75rem + 9.375vw ,7.5rem)
+    padding-right: clamp(1.875rem ,-4.6875rem + 10.9375vw ,8.4375rem)
   }
   .feedback__wrapper {
-    padding-right: clamp(1.875rem ,-3.75rem + 9.375vw ,7.5rem)
+    padding-left: clamp(1.875rem ,-4.6875rem + 10.9375vw ,8.4375rem)
   }
   .talk__wrapper {
-    padding-left: clamp(1.875rem ,-3.75rem + 9.375vw ,7.5rem)
+    padding-right: clamp(1.875rem ,-4.6875rem + 10.9375vw ,8.4375rem)
   }
   .talk__wrapper {
-    padding-right: clamp(1.875rem ,-3.75rem + 9.375vw ,7.5rem)
+    padding-left: clamp(1.875rem ,-4.6875rem + 10.9375vw ,8.4375rem)
+  }
+  .block-title {
+    padding-top: clamp(5rem ,2.5rem + 4.1666666667vw ,7.5rem)
+  }
+  .block-title {
+    padding-bottom: clamp(5rem ,2.5rem + 4.1666666667vw ,7.5rem)
+  }
+  .block-title {
+    margin-bottom: clamp(5rem ,2.5rem + 4.1666666667vw ,7.5rem)
+  }
+  .mission-about {
+    padding-bottom: clamp(5rem ,2.5rem + 4.1666666667vw ,7.5rem)
+  }
+  .mission-about__text {
+    padding-left: clamp(1.875rem ,-4.6875rem + 10.9375vw ,8.4375rem)
+  }
+  .mission-about__text {
+    padding-right: clamp(1.875rem ,-4.6875rem + 10.9375vw ,8.4375rem)
+  }
+  .mission-about__text {
+    padding-top: clamp(2.5rem ,1.25rem + 2.0833333333vw ,3.75rem)
+  }
+  .mission-about__text {
+    padding-bottom: clamp(2.5rem ,1.25rem + 2.0833333333vw ,3.75rem)
   }
 }
-@media (min-width:20em)and (max-width:60em) {
-  .wrap-cnt--wide {
-    padding-left: clamp(.9375rem ,.46875rem + 2.34375vw ,1.875rem)
+@media (max-width:60em)and (min-width:60em) {
+  .title {
+    font-size: 3.5rem
+  }
+  .mission-about__body {
+    font-size: 1.25rem
+  }
+}
+@media (max-width:60em)and (min-width:48em)and (max-width:60em) {
+  .title {
+    font-size: clamp(3rem ,1rem + 4.1666666667vw ,3.5rem)
+  }
+  .mission-about__body {
+    font-size: clamp(1.125rem ,.625rem + 1.0416666667vw ,1.25rem)
+  }
+}
+@media (max-width:48em)and (min-width:48em) {
+  .title {
+    font-size: 3rem
+  }
+  .page__hero-video {
+    margin-bottom: 5rem
+  }
+  .block-title {
+    margin-bottom: 5rem
+  }
+  .mission-about {
+    padding-bottom: 5rem
+  }
+}
+@media (max-width:48em)and (min-width:30em)and (max-width:48em) {
+  .title {
+    font-size: clamp(2.625rem ,2rem + 2.0833333333vw ,3rem)
+  }
+  .page__hero-video {
+    margin-bottom: clamp(3.75rem ,1.6666666667rem + 6.9444444444vw ,5rem)
+  }
+  .block-title {
+    margin-bottom: clamp(2.5rem ,-1.6666666667rem + 13.8888888889vw ,5rem)
+  }
+  .mission-about {
+    padding-bottom: clamp(3.75rem ,1.6666666667rem + 6.9444444444vw ,5rem)
+  }
+}
+@media (max-width:30em)and (min-width:30em) {
+  .title {
+    font-size: 2.625rem
   }
   .wrap-cnt--wide {
-    padding-right: clamp(.9375rem ,.46875rem + 2.34375vw ,1.875rem)
+    padding-left: 1.875rem
+  }
+  .wrap-cnt--wide {
+    padding-right: 1.875rem
+  }
+  .hero__cnt {
+    padding-left: 1.875rem
   }
   .projects__list--right .projects__body .projects__about {
-    padding-right: clamp(.9375rem ,.46875rem + 2.34375vw ,1.875rem)
+    padding-right: 1.875rem
   }
   .projects__about {
-    padding-left: clamp(.9375rem ,.46875rem + 2.34375vw ,1.875rem)
+    padding-left: 1.875rem
+  }
+  .projects-all {
+    margin-left: 1.875rem
   }
   .thinking__body {
-    padding-left: clamp(.9375rem ,.46875rem + 2.34375vw ,1.875rem)
+    padding-left: 1.875rem
   }
   .feedback__wrapper {
-    padding-left: clamp(.9375rem ,.46875rem + 2.34375vw ,1.875rem)
+    padding-right: 1.875rem
   }
   .feedback__wrapper {
-    padding-right: clamp(.9375rem ,.46875rem + 2.34375vw ,1.875rem)
+    padding-left: 1.875rem
   }
   .talk__wrapper {
-    padding-left: clamp(.9375rem ,.46875rem + 2.34375vw ,1.875rem)
+    padding-right: 1.875rem
   }
   .talk__wrapper {
-    padding-right: clamp(.9375rem ,.46875rem + 2.34375vw ,1.875rem)
+    padding-left: 1.875rem
+  }
+  .mission-about__body {
+    font-size: 1.125rem
+  }
+  .mission-about__text {
+    padding-left: 1.875rem
+  }
+  .mission-about__text {
+    padding-right: 1.875rem
+  }
+}
+@media (max-width:30em)and (min-width:22.5em)and (max-width:30em) {
+  .title {
+    font-size: clamp(2.25rem ,1.125rem + 5vw ,2.625rem)
+  }
+  .wrap-cnt--wide {
+    padding-left: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
+  }
+  .wrap-cnt--wide {
+    padding-right: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
+  }
+  .hero__cnt {
+    padding-left: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
+  }
+  .projects__list--right .projects__body .projects__about {
+    padding-right: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
+  }
+  .projects__about {
+    padding-left: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
+  }
+  .projects-all {
+    margin-left: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
+  }
+  .thinking__body {
+    padding-left: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
+  }
+  .feedback__wrapper {
+    padding-right: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
+  }
+  .feedback__wrapper {
+    padding-left: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
+  }
+  .talk__wrapper {
+    padding-right: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
+  }
+  .talk__wrapper {
+    padding-left: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
+  }
+  .mission-about__body {
+    font-size: clamp(1rem ,.625rem + 1.6666666667vw ,1.125rem)
+  }
+  .mission-about__text {
+    padding-left: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
+  }
+  .mission-about__text {
+    padding-right: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
+  }
+}
+@media (max-width:22.5em)and (min-width:22.5em) {
+  .title {
+    font-size: 2.25rem
+  }
+  .wrap-cnt--wide {
+    padding-left: 1.25rem
+  }
+  .wrap-cnt--wide {
+    padding-right: 1.25rem
+  }
+  .hero__cnt {
+    padding-left: 1.25rem
+  }
+  .projects__list--right .projects__body .projects__about {
+    padding-right: 1.25rem
+  }
+  .projects__about {
+    padding-left: 1.25rem
+  }
+  .projects-all {
+    margin-left: 1.25rem
+  }
+  .thinking__body {
+    padding-left: 1.25rem
+  }
+  .feedback__wrapper {
+    padding-right: 1.25rem
+  }
+  .feedback__wrapper {
+    padding-left: 1.25rem
+  }
+  .talk__wrapper {
+    padding-right: 1.25rem
+  }
+  .talk__wrapper {
+    padding-left: 1.25rem
+  }
+  .block-title {
+    margin-bottom: 2.5rem
+  }
+  .mission-about {
+    padding-bottom: 3.75rem
+  }
+  .mission-about__text {
+    padding-left: 1.25rem
+  }
+  .mission-about__text {
+    padding-right: 1.25rem
+  }
+}
+@media (max-width:22.5em)and (min-width:20em)and (max-width:22.5em) {
+  .title {
+    font-size: clamp(1.75rem ,-2.25rem + 20vw ,2.25rem)
+  }
+  .wrap-cnt--wide {
+    padding-left: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
+  }
+  .wrap-cnt--wide {
+    padding-right: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
+  }
+  .hero__cnt {
+    padding-left: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
+  }
+  .projects__list--right .projects__body .projects__about {
+    padding-right: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
+  }
+  .projects__about {
+    padding-left: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
+  }
+  .projects-all {
+    margin-left: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
+  }
+  .thinking__body {
+    padding-left: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
+  }
+  .feedback__wrapper {
+    padding-right: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
+  }
+  .feedback__wrapper {
+    padding-left: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
+  }
+  .talk__wrapper {
+    padding-right: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
+  }
+  .talk__wrapper {
+    padding-left: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
+  }
+  .block-title {
+    margin-bottom: clamp(2rem ,-2rem + 20vw ,2.5rem)
+  }
+  .mission-about {
+    padding-bottom: clamp(2.5rem ,-7.5rem + 50vw ,3.75rem)
+  }
+  .mission-about__text {
+    padding-left: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
+  }
+  .mission-about__text {
+    padding-right: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
   }
 }
 @media (min-width:47.99875em)and (max-width:105em) {
@@ -3549,26 +4027,50 @@ button.swiper-pagination-bullet {
 }
 @media (max-width:75em)and (min-width:120em) {
   .projects__list--right .projects__body .projects__about {
-    padding-left: 7.5rem
+    padding-left: 8.4375rem
   }
   .projects__about {
-    padding-right: 7.5rem
+    padding-right: 8.4375rem
   }
 }
 @media (max-width:75em)and (min-width:60em)and (max-width:120em) {
   .projects__list--right .projects__body .projects__about {
-    padding-left: clamp(1.875rem ,-3.75rem + 9.375vw ,7.5rem)
+    padding-left: clamp(1.875rem ,-4.6875rem + 10.9375vw ,8.4375rem)
   }
   .projects__about {
-    padding-right: clamp(1.875rem ,-3.75rem + 9.375vw ,7.5rem)
+    padding-right: clamp(1.875rem ,-4.6875rem + 10.9375vw ,8.4375rem)
   }
 }
-@media (max-width:75em)and (min-width:20em)and (max-width:60em) {
+@media (max-width:75em)and (max-width:30em)and (min-width:30em) {
   .projects__list--right .projects__body .projects__about {
-    padding-left: clamp(.9375rem ,.46875rem + 2.34375vw ,1.875rem)
+    padding-left: 1.875rem
   }
   .projects__about {
-    padding-right: clamp(.9375rem ,.46875rem + 2.34375vw ,1.875rem)
+    padding-right: 1.875rem
+  }
+}
+@media (max-width:75em)and (max-width:30em)and (min-width:22.5em)and (max-width:30em) {
+  .projects__list--right .projects__body .projects__about {
+    padding-left: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
+  }
+  .projects__about {
+    padding-right: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
+  }
+}
+@media (max-width:75em)and (max-width:22.5em)and (min-width:22.5em) {
+  .projects__list--right .projects__body .projects__about {
+    padding-left: 1.25rem
+  }
+  .projects__about {
+    padding-right: 1.25rem
+  }
+}
+@media (max-width:75em)and (max-width:22.5em)and (min-width:20em)and (max-width:22.5em) {
+  .projects__list--right .projects__body .projects__about {
+    padding-left: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
+  }
+  .projects__about {
+    padding-right: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
   }
 }
 @media (min-width:61.99875em)and (max-width:105em) {
