@@ -173,9 +173,9 @@ body {
   background: #016546;
   padding-top: 1.125rem;
   padding-bottom: 1rem;
-  transition: color .75s,background-color .75s,opacity .75s ease .75s,-webkit-transform .75s ease .75s;
-  transition: color .75s,background-color .75s,transform .75s ease .75s,opacity .75s ease .75s;
-  transition: color .75s,background-color .75s,transform .75s ease .75s,opacity .75s ease .75s,-webkit-transform .75s ease .75s;
+  transition: color .75s,background-color .75s,opacity .75s ease .5s,-webkit-transform .75s ease .5s;
+  transition: color .75s,background-color .75s,transform .75s ease .5s,opacity .75s ease .5s;
+  transition: color .75s,background-color .75s,transform .75s ease .5s,opacity .75s ease .5s,-webkit-transform .75s ease .5s;
   border: 1px solid transparent
 }
 .button._watcher-view {
@@ -1390,11 +1390,23 @@ video {
   padding: 0 .9375rem
 }
 .price__cost {
+  opacity: 0;
+  -webkit-transform: translate(0,5%);
+  transform: translate(0,5%);
+  transition: opacity .75s,-webkit-transform .75s;
+  transition: transform .75s,opacity .75s;
+  transition: transform .75s,opacity .75s,-webkit-transform .75s;
   display: flex;
   gap: .625rem;
   justify-content: flex-end;
   align-items: center;
   flex: 1 0 auto
+}
+.price__cost._watcher-view {
+  transition-delay: .5s;
+  -webkit-transform: translate(0,0);
+  transform: translate(0,0);
+  opacity: 1
 }
 .price__from {
   color: #fff;
