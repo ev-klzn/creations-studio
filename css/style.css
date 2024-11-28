@@ -1308,7 +1308,6 @@ video {
   color: #cecece
 }
 .feedback__actions {
-  max-width: 20.9375rem;
   display: flex;
   margin: 0 auto;
   position: relative;
@@ -1546,6 +1545,75 @@ video {
 }
 .mission-about__text {
   align-items: center
+}
+.specialize__list {
+  display: grid
+}
+.item-specialize {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2.5rem
+}
+.item-specialize--reverse .item-specialize__img {
+  order: 2
+}
+.item-specialize--reverse .item-specialize__body {
+  order: 1
+}
+.item-specialize__image {
+  aspect-ratio: 800/550
+}
+.item-specialize__body {
+  display: grid;
+  gap: 1.25rem;
+  align-content: space-between
+}
+.item-specialize__title {
+  margin-bottom: 1.25rem;
+  font-size: 2rem
+}
+.item-specialize__text {
+  margin-bottom: 1.25rem
+}
+.item-specialize__list {
+  display: grid;
+  gap: .625rem
+}
+.item-specialize__list li {
+  display: inline-flex;
+  align-self: center;
+  gap: .625rem;
+  justify-content: flex-end;
+  opacity: 0;
+  -webkit-transform: translate(0,5%);
+  transform: translate(0,5%);
+  transition: opacity .75s,-webkit-transform .75s;
+  transition: opacity .75s,transform .75s;
+  transition: opacity .75s,transform .75s,-webkit-transform .75s
+}
+.item-specialize__list li._watcher-view {
+  opacity: 1;
+  -webkit-transform: translate(0,0);
+  transform: translate(0,0);
+  transition-delay: .5s
+}
+.item-specialize__list li:before {
+  padding-left: 1.5rem;
+  content: "";
+  display: inline-block;
+  background: url(../img/icons/point.svg) 0 0 no-repeat;
+  background-size: cover;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: 0 0 1.5rem
+}
+.item-specialize__actions {
+  text-align: center
+}
+.item-specialize__button {
+  transition: color .75s,background-color .75s,opacity .75s ease .7s,-webkit-transform .75s ease .7s;
+  transition: color .75s,background-color .75s,transform .75s ease .7s,opacity .75s ease .7s;
+  transition: color .75s,background-color .75s,transform .75s ease .7s,opacity .75s ease .7s,-webkit-transform .75s ease .7s
 }
 @font-face {
   font-family: swiper-icons;
@@ -2158,6 +2226,9 @@ button.swiper-pagination-bullet {
   overflow: hidden
 }
 @media (min-width:47.99875em) {
+  .feedback__actions {
+    max-width: 20.9375rem
+  }
   .price__wrapper::before {
     content: "";
     position: absolute;
@@ -2376,6 +2447,9 @@ button.swiper-pagination-bullet {
   .page__follow {
     margin-bottom: 7.5rem
   }
+  .page__specialize {
+    margin-bottom: 7.5rem
+  }
   .hero__title {
     padding-right: 1.875rem
   }
@@ -2451,7 +2525,7 @@ button.swiper-pagination-bullet {
     padding-right: 2.5rem
   }
   .feedback__wrapper {
-    padding-top: 7.5rem
+    padding-top: 8.4375rem
   }
   .feedback__text {
     margin-bottom: 4.0625rem
@@ -2541,6 +2615,9 @@ button.swiper-pagination-bullet {
   .projects__about {
     padding-left: 8.4375rem
   }
+  .thinking--mb {
+    margin-bottom: 7.5rem
+  }
   .thinking__body {
     padding-left: 8.4375rem
   }
@@ -2583,6 +2660,9 @@ button.swiper-pagination-bullet {
   .mission-about__text {
     padding-bottom: 3.75rem
   }
+  .specialize__list {
+    gap: 7.5rem
+  }
 }
 @media (max-width:120em) {
   .talk__wrapper {
@@ -2618,20 +2698,10 @@ button.swiper-pagination-bullet {
     padding-right: 1.875rem
   }
 }
-@media (max-width:75em)and (max-width:30em)and (max-width:22.5em) {
-  .projects__list--right .projects__body .projects__about {
-    padding-left: 1.25rem
-  }
+@media (max-width:75em)and (max-width:48em) {
   .projects__about {
-    padding-right: 1.25rem
-  }
-}
-@media (max-width:75em)and (max-width:22.5em)and (max-width:20em) {
-  .projects__list--right .projects__body .projects__about {
+    padding-right: .9375rem;
     padding-left: .9375rem
-  }
-  .projects__about {
-    padding-right: .9375rem
   }
 }
 @media (max-width:60em) {
@@ -2655,6 +2725,9 @@ button.swiper-pagination-bullet {
   }
   .projects__about {
     padding-left: 1.875rem
+  }
+  .thinking--mb {
+    margin-bottom: 5rem
   }
   .thinking__body {
     padding-left: 1.875rem
@@ -2706,6 +2779,9 @@ button.swiper-pagination-bullet {
   .mission-about__text {
     padding-bottom: 2.5rem
   }
+  .specialize__list {
+    gap: 5rem
+  }
 }
 @media (max-width:60em)and (max-width:48em) {
   .title {
@@ -2713,6 +2789,9 @@ button.swiper-pagination-bullet {
   }
   .mission-about__body {
     font-size: 1.125rem
+  }
+  .item-specialize__title {
+    font-size: 1.75rem
   }
 }
 @media (max-width:48em)and (max-width:30em) {
@@ -2722,19 +2801,58 @@ button.swiper-pagination-bullet {
   .page__hero-video {
     margin-bottom: 3.75rem
   }
+  .thinking--mb {
+    margin-bottom: 2.5rem
+  }
   .block-title {
     margin-bottom: 2.5rem
   }
   .mission-about {
     padding-bottom: 3.75rem
   }
+  .specialize__list {
+    gap: 3.75rem
+  }
+  .item-specialize__title {
+    font-size: 1.5rem
+  }
 }
 @media (max-width:48em) {
+  .wrap-cnt--wide {
+    padding-right: .9375rem;
+    padding-left: .9375rem
+  }
+  .hero__cnt {
+    padding-left: .9375rem
+  }
   .team__cnt {
     padding-left: .0000000625rem
   }
   .team__cnt {
     padding-right: .0000000625rem
+  }
+  .projects__list--right .projects__body .projects__about {
+    padding-left: .9375rem;
+    padding-right: .9375rem
+  }
+  .thinking--mb {
+    padding-right: .9375rem;
+    padding-left: .9375rem
+  }
+  .thinking__body {
+    padding-left: .9375rem
+  }
+  .feedback__wrapper {
+    padding-right: .9375rem;
+    padding-left: .9375rem
+  }
+  .price__item {
+    margin-left: 0;
+    margin-right: 0
+  }
+  .talk__wrapper {
+    padding-right: .9375rem;
+    padding-left: .9375rem
   }
   .talk__form-wrapper {
     flex-direction: column;
@@ -2752,6 +2870,16 @@ button.swiper-pagination-bullet {
   .mission-about__body--reverse {
     grid-template-columns: 40% 60%
   }
+  .mission-about__text {
+    padding-right: .9375rem;
+    padding-left: .9375rem
+  }
+  .item-specialize__text {
+    font-size: 1.125rem
+  }
+  .item-specialize__list>li {
+    font-size: 1.125rem
+  }
 }
 @media (max-width:48em)and (max-width:20em) {
   .talk__form-wrapper {
@@ -2762,47 +2890,14 @@ button.swiper-pagination-bullet {
   .title {
     font-size: 2.25rem
   }
-  .wrap-cnt--wide {
-    padding-left: 1.25rem
-  }
-  .wrap-cnt--wide {
-    padding-right: 1.25rem
-  }
-  .hero__cnt {
-    padding-left: 1.25rem
-  }
-  .projects__list--right .projects__body .projects__about {
-    padding-right: 1.25rem
-  }
-  .projects__about {
-    padding-left: 1.25rem
-  }
-  .projects-all {
-    margin-left: 1.25rem
-  }
-  .thinking__body {
-    padding-left: 1.25rem
-  }
-  .feedback__wrapper {
-    padding-right: 1.25rem
-  }
-  .feedback__wrapper {
-    padding-left: 1.25rem
-  }
-  .talk__wrapper {
-    padding-right: 1.25rem
-  }
-  .talk__wrapper {
-    padding-left: 1.25rem
-  }
   .mission-about__body {
     font-size: 1rem
   }
-  .mission-about__text {
-    padding-left: 1.25rem
+  .specialize__list {
+    gap: 2.5rem
   }
-  .mission-about__text {
-    padding-right: 1.25rem
+  .item-specialize__title {
+    font-size: 1.375rem
   }
 }
 @media (max-width:20em) {
@@ -2897,6 +2992,9 @@ button.swiper-pagination-bullet {
     margin-bottom: 2.5rem
   }
   .page__follow {
+    margin-bottom: 2.5rem
+  }
+  .page__specialize {
     margin-bottom: 2.5rem
   }
   .hero__title {
@@ -3072,6 +3170,18 @@ button.swiper-pagination-bullet {
     z-index: -1;
     bottom: 0;
     left: 0
+  }
+  .item-specialize {
+    grid-template-columns: auto
+  }
+  .item-specialize--reverse .item-specialize__img {
+    order: 1
+  }
+  .item-specialize--reverse .item-specialize__body {
+    order: 2
+  }
+  .item-specialize__body {
+    gap: 3.75rem
   }
 }
 @media (max-width:61.99875em) {
@@ -3324,6 +3434,9 @@ button.swiper-pagination-bullet {
     justify-content: center;
     align-items: center
   }
+  .projects-all {
+    margin-left: .9375rem
+  }
   .price__list>*:nth-child(odd) {
     margin-bottom: .9375rem
   }
@@ -3352,6 +3465,14 @@ button.swiper-pagination-bullet {
   }
   .mission-about__img {
     order: 2
+  }
+  .item-specialize__body {
+    gap: 2.5rem
+  }
+  .item-specialize__button {
+    transition: color .75s,background-color .75s,opacity .75s ease .6s,-webkit-transform .75s ease .6s;
+    transition: color .75s,background-color .75s,transform .75s ease .6s,opacity .75s ease .6s;
+    transition: color .75s,background-color .75s,transform .75s ease .6s,opacity .75s ease .6s,-webkit-transform .75s ease .6s
   }
 }
 @media (max-width:47.99875em)and (any-hover:none) {
@@ -3401,38 +3522,8 @@ button.swiper-pagination-bullet {
   .title {
     font-size: 1.75rem
   }
-  .wrap-cnt--wide {
-    padding-left: .9375rem
-  }
-  .wrap-cnt--wide {
-    padding-right: .9375rem
-  }
-  .hero__cnt {
-    padding-left: .9375rem
-  }
-  .projects__list--right .projects__body .projects__about {
-    padding-right: .9375rem
-  }
-  .projects__about {
-    padding-left: .9375rem
-  }
-  .projects-all {
-    margin-left: .9375rem
-  }
-  .thinking__body {
-    padding-left: .9375rem
-  }
-  .feedback__wrapper {
-    padding-right: .9375rem
-  }
-  .feedback__wrapper {
-    padding-left: .9375rem
-  }
-  .talk__wrapper {
-    padding-right: .9375rem
-  }
-  .talk__wrapper {
-    padding-left: .9375rem
+  .thinking--mb {
+    margin-bottom: 2rem
   }
   .block-title {
     margin-bottom: 2rem
@@ -3440,16 +3531,18 @@ button.swiper-pagination-bullet {
   .mission-about {
     padding-bottom: 2.5rem
   }
-  .mission-about__text {
-    padding-left: .9375rem
-  }
-  .mission-about__text {
-    padding-right: .9375rem
-  }
 }
 @media (max-width:22.49875em) {
   .offer {
     flex: 1 1 15.625rem
+  }
+}
+@media (max-width:22.5em) {
+  .item-specialize__text {
+    font-size: 1rem
+  }
+  .item-specialize__list>li {
+    font-size: 1rem
   }
 }
 @media (min-width:20em)and (max-width:105em) {
@@ -3544,6 +3637,9 @@ button.swiper-pagination-bullet {
     margin-bottom: clamp(2.5rem ,1.3235294118rem + 5.8823529412vw ,7.5rem)
   }
   .page__follow {
+    margin-bottom: clamp(2.5rem ,1.3235294118rem + 5.8823529412vw ,7.5rem)
+  }
+  .page__specialize {
     margin-bottom: clamp(2.5rem ,1.3235294118rem + 5.8823529412vw ,7.5rem)
   }
   .hero__title {
@@ -3699,6 +3795,9 @@ button.swiper-pagination-bullet {
   .projects__about {
     padding-left: clamp(1.875rem ,-4.6875rem + 10.9375vw ,8.4375rem)
   }
+  .thinking--mb {
+    margin-bottom: clamp(5rem ,2.5rem + 4.1666666667vw ,7.5rem)
+  }
   .thinking__body {
     padding-left: clamp(1.875rem ,-4.6875rem + 10.9375vw ,8.4375rem)
   }
@@ -3738,6 +3837,9 @@ button.swiper-pagination-bullet {
   .mission-about__text {
     padding-bottom: clamp(2.5rem ,1.25rem + 2.0833333333vw ,3.75rem)
   }
+  .specialize__list {
+    gap: clamp(5rem ,2.5rem + 4.1666666667vw ,7.5rem)
+  }
 }
 @media (max-width:60em)and (min-width:60em) {
   .title {
@@ -3745,6 +3847,9 @@ button.swiper-pagination-bullet {
   }
   .mission-about__body {
     font-size: 1.25rem
+  }
+  .item-specialize__title {
+    font-size: 2rem
   }
 }
 @media (max-width:60em)and (min-width:48em)and (max-width:60em) {
@@ -3754,6 +3859,9 @@ button.swiper-pagination-bullet {
   .mission-about__body {
     font-size: clamp(1.125rem ,.625rem + 1.0416666667vw ,1.25rem)
   }
+  .item-specialize__title {
+    font-size: clamp(1.75rem ,.75rem + 2.0833333333vw ,2rem)
+  }
 }
 @media (max-width:48em)and (min-width:48em) {
   .title {
@@ -3762,11 +3870,20 @@ button.swiper-pagination-bullet {
   .page__hero-video {
     margin-bottom: 5rem
   }
+  .thinking--mb {
+    margin-bottom: 5rem
+  }
   .block-title {
     margin-bottom: 5rem
   }
   .mission-about {
     padding-bottom: 5rem
+  }
+  .specialize__list {
+    gap: 5rem
+  }
+  .item-specialize__title {
+    font-size: 1.75rem
   }
 }
 @media (max-width:48em)and (min-width:30em)and (max-width:48em) {
@@ -3776,143 +3893,56 @@ button.swiper-pagination-bullet {
   .page__hero-video {
     margin-bottom: clamp(3.75rem ,1.6666666667rem + 6.9444444444vw ,5rem)
   }
+  .thinking--mb {
+    margin-bottom: clamp(2.5rem ,-1.6666666667rem + 13.8888888889vw ,5rem)
+  }
   .block-title {
     margin-bottom: clamp(2.5rem ,-1.6666666667rem + 13.8888888889vw ,5rem)
   }
   .mission-about {
     padding-bottom: clamp(3.75rem ,1.6666666667rem + 6.9444444444vw ,5rem)
   }
+  .specialize__list {
+    gap: clamp(3.75rem ,1.6666666667rem + 6.9444444444vw ,5rem)
+  }
+  .item-specialize__title {
+    font-size: clamp(1.5rem ,1.0833333333rem + 1.3888888889vw ,1.75rem)
+  }
 }
 @media (max-width:30em)and (min-width:30em) {
   .title {
     font-size: 2.625rem
   }
-  .wrap-cnt--wide {
-    padding-left: 1.875rem
-  }
-  .wrap-cnt--wide {
-    padding-right: 1.875rem
-  }
-  .hero__cnt {
-    padding-left: 1.875rem
-  }
-  .projects__list--right .projects__body .projects__about {
-    padding-right: 1.875rem
-  }
-  .projects__about {
-    padding-left: 1.875rem
-  }
-  .projects-all {
-    margin-left: 1.875rem
-  }
-  .thinking__body {
-    padding-left: 1.875rem
-  }
-  .feedback__wrapper {
-    padding-right: 1.875rem
-  }
-  .feedback__wrapper {
-    padding-left: 1.875rem
-  }
-  .talk__wrapper {
-    padding-right: 1.875rem
-  }
-  .talk__wrapper {
-    padding-left: 1.875rem
-  }
   .mission-about__body {
     font-size: 1.125rem
   }
-  .mission-about__text {
-    padding-left: 1.875rem
+  .specialize__list {
+    gap: 3.75rem
   }
-  .mission-about__text {
-    padding-right: 1.875rem
+  .item-specialize__title {
+    font-size: 1.5rem
   }
 }
 @media (max-width:30em)and (min-width:22.5em)and (max-width:30em) {
   .title {
     font-size: clamp(2.25rem ,1.125rem + 5vw ,2.625rem)
   }
-  .wrap-cnt--wide {
-    padding-left: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
-  }
-  .wrap-cnt--wide {
-    padding-right: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
-  }
-  .hero__cnt {
-    padding-left: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
-  }
-  .projects__list--right .projects__body .projects__about {
-    padding-right: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
-  }
-  .projects__about {
-    padding-left: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
-  }
-  .projects-all {
-    margin-left: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
-  }
-  .thinking__body {
-    padding-left: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
-  }
-  .feedback__wrapper {
-    padding-right: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
-  }
-  .feedback__wrapper {
-    padding-left: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
-  }
-  .talk__wrapper {
-    padding-right: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
-  }
-  .talk__wrapper {
-    padding-left: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
-  }
   .mission-about__body {
     font-size: clamp(1rem ,.625rem + 1.6666666667vw ,1.125rem)
   }
-  .mission-about__text {
-    padding-left: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
+  .specialize__list {
+    gap: clamp(2.5rem ,-1.25rem + 16.6666666667vw ,3.75rem)
   }
-  .mission-about__text {
-    padding-right: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
+  .item-specialize__title {
+    font-size: clamp(1.375rem ,1rem + 1.6666666667vw ,1.5rem)
   }
 }
 @media (max-width:22.5em)and (min-width:22.5em) {
   .title {
     font-size: 2.25rem
   }
-  .wrap-cnt--wide {
-    padding-left: 1.25rem
-  }
-  .wrap-cnt--wide {
-    padding-right: 1.25rem
-  }
-  .hero__cnt {
-    padding-left: 1.25rem
-  }
-  .projects__list--right .projects__body .projects__about {
-    padding-right: 1.25rem
-  }
-  .projects__about {
-    padding-left: 1.25rem
-  }
-  .projects-all {
-    margin-left: 1.25rem
-  }
-  .thinking__body {
-    padding-left: 1.25rem
-  }
-  .feedback__wrapper {
-    padding-right: 1.25rem
-  }
-  .feedback__wrapper {
-    padding-left: 1.25rem
-  }
-  .talk__wrapper {
-    padding-right: 1.25rem
-  }
-  .talk__wrapper {
-    padding-left: 1.25rem
+  .thinking--mb {
+    margin-bottom: 2.5rem
   }
   .block-title {
     margin-bottom: 2.5rem
@@ -3920,61 +3950,19 @@ button.swiper-pagination-bullet {
   .mission-about {
     padding-bottom: 3.75rem
   }
-  .mission-about__text {
-    padding-left: 1.25rem
-  }
-  .mission-about__text {
-    padding-right: 1.25rem
-  }
 }
 @media (max-width:22.5em)and (min-width:20em)and (max-width:22.5em) {
   .title {
     font-size: clamp(1.75rem ,-2.25rem + 20vw ,2.25rem)
   }
-  .wrap-cnt--wide {
-    padding-left: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
-  }
-  .wrap-cnt--wide {
-    padding-right: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
-  }
-  .hero__cnt {
-    padding-left: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
-  }
-  .projects__list--right .projects__body .projects__about {
-    padding-right: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
-  }
-  .projects__about {
-    padding-left: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
-  }
-  .projects-all {
-    margin-left: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
-  }
-  .thinking__body {
-    padding-left: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
-  }
-  .feedback__wrapper {
-    padding-right: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
-  }
-  .feedback__wrapper {
-    padding-left: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
-  }
-  .talk__wrapper {
-    padding-right: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
-  }
-  .talk__wrapper {
-    padding-left: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
+  .thinking--mb {
+    margin-bottom: clamp(2rem ,-2rem + 20vw ,2.5rem)
   }
   .block-title {
     margin-bottom: clamp(2rem ,-2rem + 20vw ,2.5rem)
   }
   .mission-about {
     padding-bottom: clamp(2.5rem ,-7.5rem + 50vw ,3.75rem)
-  }
-  .mission-about__text {
-    padding-left: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
-  }
-  .mission-about__text {
-    padding-right: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
   }
 }
 @media (min-width:47.99875em)and (max-width:105em) {
@@ -4041,44 +4029,12 @@ button.swiper-pagination-bullet {
     padding-right: clamp(1.875rem ,-4.6875rem + 10.9375vw ,8.4375rem)
   }
 }
-@media (max-width:75em)and (max-width:30em)and (min-width:30em) {
-  .projects__list--right .projects__body .projects__about {
-    padding-left: 1.875rem
-  }
-  .projects__about {
-    padding-right: 1.875rem
-  }
-}
-@media (max-width:75em)and (max-width:30em)and (min-width:22.5em)and (max-width:30em) {
-  .projects__list--right .projects__body .projects__about {
-    padding-left: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
-  }
-  .projects__about {
-    padding-right: clamp(1.25rem ,-.625rem + 8.3333333333vw ,1.875rem)
-  }
-}
-@media (max-width:75em)and (max-width:22.5em)and (min-width:22.5em) {
-  .projects__list--right .projects__body .projects__about {
-    padding-left: 1.25rem
-  }
-  .projects__about {
-    padding-right: 1.25rem
-  }
-}
-@media (max-width:75em)and (max-width:22.5em)and (min-width:20em)and (max-width:22.5em) {
-  .projects__list--right .projects__body .projects__about {
-    padding-left: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
-  }
-  .projects__about {
-    padding-right: clamp(.9375rem ,-1.5625rem + 12.5vw ,1.25rem)
-  }
-}
 @media (min-width:61.99875em)and (max-width:105em) {
   .thinking__about {
     gap: clamp(1.25rem ,-24.8824343769rem + 42.1499375018vw ,19.375rem)
   }
   .feedback__wrapper {
-    padding-top: clamp(4.0625rem ,-.8936513473rem + 7.9939536641vw ,7.5rem)
+    padding-top: clamp(4.0625rem ,-2.2453289875rem + 10.1741228453vw ,8.4375rem)
   }
 }
 @media (min-width:75em)and (min-width:75em)and (max-width:120em) {
