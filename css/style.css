@@ -1656,7 +1656,6 @@ video {
   display: grid;
   align-items: end;
   gap: 1.25rem;
-  padding-left: .9375rem;
   padding-right: .9375rem;
   grid-area: 2/1/3/3
 }
@@ -1690,7 +1689,6 @@ video {
 .item-services__body {
   grid-area: 1/1/2/2;
   padding-right: .9375rem;
-  padding-left: .9375rem;
   display: grid;
   align-content: space-between
 }
@@ -2397,6 +2395,9 @@ button.swiper-pagination-bullet {
     grid-template-columns: repeat(2,1fr);
     gap: .9375rem
   }
+  .item-services__content {
+    align-items: center
+  }
 }
 @media (min-width:75em) {
   .team__cnt::after {
@@ -2811,6 +2812,15 @@ button.swiper-pagination-bullet {
     -moz-column-gap: 7.5rem;
     column-gap: 7.5rem
   }
+  .item-services__content--reverse .item-services__body {
+    padding-right: 8.4375rem
+  }
+  .item-services__da {
+    padding-left: 8.4375rem
+  }
+  .item-services__body {
+    padding-left: 8.4375rem
+  }
 }
 @media (max-width:120em) {
   .talk__wrapper {
@@ -2965,6 +2975,15 @@ button.swiper-pagination-bullet {
   }
   .item-services {
     padding-bottom: 5rem
+  }
+  .item-services__content--reverse .item-services__body {
+    padding-right: 1.875rem
+  }
+  .item-services__da {
+    padding-left: 1.875rem
+  }
+  .item-services__body {
+    padding-left: 1.875rem
   }
 }
 @media (max-width:60em)and (max-width:48em) {
@@ -3709,7 +3728,8 @@ button.swiper-pagination-bullet {
     transition: color .75s,background-color .75s,transform .75s ease .6s,opacity .75s ease .6s,-webkit-transform .75s ease .6s
   }
   .item-services__content--reverse .item-services__body {
-    grid-area: auto
+    grid-area: auto;
+    padding-left: .9375rem
   }
   .item-services__content--reverse .item-services__img {
     grid-area: auto
@@ -3724,11 +3744,13 @@ button.swiper-pagination-bullet {
   }
   .item-services__da {
     grid-area: auto;
+    padding-left: .9375rem;
     order: 3
   }
   .item-services__body {
     grid-area: auto;
-    order: 2
+    order: 2;
+    padding-left: .9375rem
   }
   .item-services__img {
     grid-area: auto;
@@ -4123,6 +4145,15 @@ button.swiper-pagination-bullet {
   }
   .item-services {
     padding-bottom: clamp(5rem ,2.5rem + 4.1666666667vw ,7.5rem)
+  }
+  .item-services__content--reverse .item-services__body {
+    padding-right: clamp(1.875rem ,-4.6875rem + 10.9375vw ,8.4375rem)
+  }
+  .item-services__da {
+    padding-left: clamp(1.875rem ,-4.6875rem + 10.9375vw ,8.4375rem)
+  }
+  .item-services__body {
+    padding-left: clamp(1.875rem ,-4.6875rem + 10.9375vw ,8.4375rem)
   }
 }
 @media (max-width:60em)and (min-width:60em) {
