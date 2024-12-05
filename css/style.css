@@ -3938,6 +3938,9 @@ button.swiper-pagination-bullet {
   }
 }
 @media (max-width:63.99875em) {
+  .hero__cnt {
+    max-width: 100%
+  }
   .offerings__list {
     gap: .9375rem
   }
