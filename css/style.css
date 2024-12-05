@@ -511,6 +511,7 @@ body::after {
 .text--lightgreen {
   color: #d1deda
 }
+.text address,
 .text p {
   opacity: 0;
   -webkit-transform: translate(0,5%);
@@ -519,12 +520,14 @@ body::after {
   transition: opacity .75s,transform .75s;
   transition: opacity .75s,transform .75s,-webkit-transform .75s
 }
+.text address._watcher-view,
 .text p._watcher-view {
   opacity: 1;
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
   transition-delay: .3s
 }
+.text address a,
 .text p a {
   transition: all .5s
 }
@@ -945,8 +948,20 @@ address {
   z-index: 3
 }
 .hero__title--small {
+  opacity: 0;
+  -webkit-transform: translate(0,5%);
+  transform: translate(0,5%);
+  transition: opacity .75s,-webkit-transform .75s;
+  transition: transform .75s,opacity .75s;
+  transition: transform .75s,opacity .75s,-webkit-transform .75s;
   color: #fff;
   margin-bottom: 1.25rem
+}
+.hero__title--small._watcher-view {
+  transition-delay: .1s;
+  -webkit-transform: translate(0,0);
+  transform: translate(0,0);
+  opacity: 1
 }
 .hero__text {
   position: relative;
@@ -5400,6 +5415,7 @@ button.swiper-pagination-bullet {
   [class*=_link]:hover {
     color: #009e67
   }
+  .text address a:hover,
   .text p a:hover {
     color: #009e67
   }

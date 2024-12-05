@@ -4409,6 +4409,10 @@
             touchRatio: 0,
             loop: true,
             effect: "fade",
+            autoplay: {
+                delay: 6e3,
+                disableOnInteraction: false
+            },
             pagination: {
                 el: ".hero-main__swiper-pagination",
                 clickable: true
