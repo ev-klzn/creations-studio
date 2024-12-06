@@ -785,6 +785,9 @@ address {
   -webkit-transform: translate(0,0);
   transform: translate(0,0)
 }
+.test {
+  color: rgba(0,0,0,.5019607843)
+}
 .header {
   position: fixed;
   width: 100%;
@@ -3938,6 +3941,9 @@ button.swiper-pagination-bullet {
   }
 }
 @media (max-width:63.99875em) {
+  .hero--right .hero__cnt {
+    width: 100%
+  }
   .hero__cnt {
     max-width: 100%
   }
@@ -4265,7 +4271,9 @@ button.swiper-pagination-bullet {
     transform: rotate(45deg)
   }
   .hero--right {
-    align-items: stretch
+    align-items: stretch;
+    justify-content: stretch;
+    text-align: end
   }
   .team__cnt {
     grid-template-columns: auto;
