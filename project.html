@@ -4,9 +4,23 @@
 <head>
 	<title>Contemporary Cozy Bedroom</title>
 	<meta charset="UTF-8" />
+	<style>
+		.loading body>*:not(#fls-preloader) {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		.loaded body>*:not(#fls-preloader) {
+			transition:
+				opacity 0.5s ease 0.1s,
+				visibility 0.5s ease 0.1s;
+			opacity: 1;
+			visibility: visible;
+		}
+	</style>
 	<meta name="format-detection" content="telephone=no" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241206100214" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20241206101003" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<meta name="description" content="Contemporary Cozy Bedroom – Modern and cozy bedroom designs" />
 	<meta name="robots" content="noindex, nofollow" />
@@ -217,7 +231,7 @@
 
 	</div>
 	<div>
-		<script src="js/app.min.js?_v=20241206100214"></script>
+		<script src="js/app.min.js?_v=20241206101003"></script>
 	</div>
 </body>
 
