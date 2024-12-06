@@ -1151,6 +1151,9 @@ address {
   font-size: 1.0625rem;
   letter-spacing: .010625rem
 }
+.offer__more span {
+  transition: all .5s
+}
 .video-container {
   position: relative
 }
@@ -5453,6 +5456,9 @@ button.swiper-pagination-bullet {
   }
   .mission__link:hover {
     color: #fff
+  }
+  .offer__more span:hover {
+    color: #009e67
   }
   .projects__nav-prew:hover {
     color: #009e67
