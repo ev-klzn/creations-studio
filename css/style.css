@@ -785,9 +785,6 @@ address {
   -webkit-transform: translate(0,0);
   transform: translate(0,0)
 }
-.test {
-  color: rgba(0,0,0,.5019607843)
-}
 .header {
   position: fixed;
   width: 100%;
@@ -802,8 +799,8 @@ address {
   background: #002117
 }
 .header._header-scroll {
-  padding-top: .625rem;
-  padding-bottom: .625rem;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
   background: rgba(3,0,11,.6470588235);
   backdrop-filter: blur(10px)
 }
@@ -4272,8 +4269,7 @@ button.swiper-pagination-bullet {
   }
   .hero--right {
     align-items: stretch;
-    justify-content: stretch;
-    text-align: end
+    justify-content: stretch
   }
   .team__cnt {
     grid-template-columns: auto;
