@@ -2024,7 +2024,8 @@ video {
   aspect-ratio: 1/1
 }
 .third__image-left--scale {
-  scale: 1.5
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5)
 }
 .third__right {
   overflow: hidden;
@@ -2045,7 +2046,8 @@ video {
   aspect-ratio: 530/950
 }
 .third__image-right--scale {
-  scale: 1.5
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5)
 }
 .fourth {
   display: grid
