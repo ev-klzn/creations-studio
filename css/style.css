@@ -221,36 +221,64 @@ textarea {
   border-radius: 0!important;
   width: 100%;
   display: block;
-  padding: 0 0;
+  padding: 3px 0;
+  color: #00855b;
   border: 1px solid transparent;
-  caret-color: inherit
+  caret-color: inherit;
+  transition: all .5s;
+  line-height: 1.3
+}
+.input._form-focus {
+  outline: 1px solid transparent;
+  border: 1px solid #00855b;
+  padding-left: .625rem;
+  padding-right: .625rem
+}
+.input._form-error {
+  color: red
 }
 .input[placeholder]:not([data-placeholder-nohiden])::-webkit-input-placeholder {
+  padding: 3px 0;
   -webkit-transition: opacity .5s;
-  transition: opacity .5s
+  transition: opacity .5s;
+  line-height: 1.3
 }
 .input[placeholder]:not([data-placeholder-nohiden]):-ms-input-placeholder {
+  padding: 3px 0;
   -ms-transition: opacity .5s;
-  transition: opacity .5s
+  transition: opacity .5s;
+  line-height: 1.3
 }
 .input[placeholder]:not([data-placeholder-nohiden])::-ms-input-placeholder {
+  padding: 3px 0;
   -ms-transition: opacity .5s;
-  transition: opacity .5s
+  transition: opacity .5s;
+  line-height: 1.3
 }
 .input[placeholder]:not([data-placeholder-nohiden])::placeholder {
-  transition: opacity .5s
+  padding: 3px 0;
+  transition: opacity .5s;
+  line-height: 1.3
 }
 .input[placeholder]:not([data-placeholder-nohiden]):focus::-webkit-input-placeholder {
-  opacity: 0
+  opacity: 0;
+  padding-left: .625rem;
+  padding-right: .625rem
 }
 .input[placeholder]:not([data-placeholder-nohiden]):focus:-ms-input-placeholder {
-  opacity: 0
+  opacity: 0;
+  padding-left: .625rem;
+  padding-right: .625rem
 }
 .input[placeholder]:not([data-placeholder-nohiden]):focus::-ms-input-placeholder {
-  opacity: 0
+  opacity: 0;
+  padding-left: .625rem;
+  padding-right: .625rem
 }
 .input[placeholder]:not([data-placeholder-nohiden]):focus::placeholder {
-  opacity: 0
+  opacity: 0;
+  padding-left: .625rem;
+  padding-right: .625rem
 }
 textarea.input {
   resize: none;
@@ -918,6 +946,7 @@ address {
   height: 100%
 }
 .hero__cnt {
+  padding-block: 1.875rem;
   position: relative;
   z-index: 2;
   max-width: 48rem;

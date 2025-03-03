@@ -433,7 +433,6 @@
             formRequiredItem.parentElement.classList.add("_form-error");
             let inputError = formRequiredItem.parentElement.querySelector(".form__error");
             if (inputError) formRequiredItem.parentElement.removeChild(inputError);
-            if (formRequiredItem.dataset.error) formRequiredItem.parentElement.insertAdjacentHTML("beforeend", `<div class="form__error">${formRequiredItem.dataset.error}</div>`);
         },
         removeError(formRequiredItem) {
             formRequiredItem.classList.remove("_form-error");
@@ -4428,6 +4427,7 @@
             spaceBetween: 30,
             autoHeight: true,
             speed: 2e3,
+            simulateTouch: false,
             navigation: {
                 prevEl: ".projects__nav-prew",
                 nextEl: ".projects__nav-next"
@@ -4437,6 +4437,7 @@
             modules: [ Navigation ],
             slidesPerView: 1.2,
             speed: 2e3,
+            simulateTouch: false,
             navigation: {
                 prevEl: ".projects__nav-prew",
                 nextEl: ".projects__nav-next"
@@ -4468,6 +4469,7 @@
             autoHeight: true,
             speed: 2e3,
             initialSlide: 1,
+            simulateTouch: false,
             navigation: {
                 prevEl: ".projects__nav-prew-right",
                 nextEl: ".projects__nav-next-right"
@@ -4482,6 +4484,7 @@
                 prevEl: ".projects__nav-prew-right",
                 nextEl: ".projects__nav-next-right"
             },
+            simulateTouch: false,
             breakpoints: {
                 320: {
                     slidesPerView: 1.1
