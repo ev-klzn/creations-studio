@@ -47,6 +47,13 @@
 ._icon-s-what:before {
   content: ""
 }
+::-webkit-scrollbar {
+  display: none
+}
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none
+}
 * {
   padding: 0;
   margin: 0;
